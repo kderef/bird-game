@@ -1,4 +1,4 @@
-# Bird game
-**door:** Fernando, Luka en Kian
-**Engine:** [godot](https://godotengine.org/)
+# Bird game  
+**door:** Fernando, Luka en Kian  
+**Engine:** [godot](https://godotengine.org/)  
 ---
