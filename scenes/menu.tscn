@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://bw8lbe8xlm3da"]
 
 [ext_resource type="Texture2D" uid="uid://c21y7hapnp06n" path="res://assets/World of Solaria New Style DEMO.png" id="1_httn4"]
-[ext_resource type="Texture2D" uid="uid://iivqp0gp6twt" path="res://assets/pixil-frame-0 (4).png" id="2_qefjs"]
+[ext_resource type="Texture2D" uid="uid://gcw350ao35dk" path="res://assets/olaf3.png" id="2_btbyl"]
 [ext_resource type="FontFile" uid="uid://e1frb40s5yf0" path="res://assets/small_bold_pixel-7.ttf" id="3_kj8s3"]
 [ext_resource type="Texture2D" uid="uid://xj2mqd6jk7ud" path="res://assets/muiskes.png" id="3_u2e3b"]
 [ext_resource type="Script" path="res://scripts/btn_play.gd" id="4_6lyak"]
-[ext_resource type="Script" path="res://scenes/Muiskes.gd" id="4_s05qy"]
+[ext_resource type="Script" path="res://scripts/Muiskes.gd" id="4_s05qy"]
 [ext_resource type="Script" path="res://scripts/btn_settings.gd" id="5_p0w84"]
 [ext_resource type="Script" path="res://scripts/btn_exit.gd" id="6_gn5t3"]
 
@@ -158,7 +158,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1, 2),
 "transitions": PackedFloat32Array(0.297302, 2.07053, 1.7411),
 "update": 0,
-"values": [Vector2(1759, 370), Vector2(1759, 300), Vector2(1759, 370)]
+"values": [Vector2(1075, 800), Vector2(1075, 730), Vector2(1075, 800)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wvlby"]
@@ -182,9 +182,9 @@ layer_1/name = "fg"
 layer_1/tile_data = PackedInt32Array(131073, 0, 8, 65537, 0, 7, 1, 0, 7, 131074, 65536, 8, 2, 65536, 7, 3, 65536, 7, 65540, 65536, 7, 4, 65536, 7, 65541, 131072, 7, 5, 131072, 7, 131077, 131072, 8, 131076, 65536, 8, 131075, 196608, 8, 65539, 65536, 7, 65538, 65536, 7, 131079, 393216, 10, 196614, 524288, 11, 131078, 524288, 10, 7, 589824, 6, 6, 589824, 1610612742, 393224, 393216, 6, 393217, 393216, 6, 196619, 327680, 6, 196616, 327680, 6, 393221, 327680, 6, 196613, 327680, 6, 65545, 327680, 6, 262146, 327680, 6, 458764, 327680, 6, 393226, 524288, 2, 393218, 524288, 4, 65547, 524288, 4, 262145, 458752, 5, 196609, 458752, 4, 196611, 196608, 10, 393225, 458752, 2, 458762, 524288, 3, 458763, 589824, 3, 458761, 458752, 3, 393227, 589824, 2, 327690, 524288, 1, 262154, 524288, 0, 327691, 589824, 1, 327689, 458752, 1, 262153, 458752, 0, 262155, 589824, 0)
 
 [node name="olaf" type="Sprite2D" parent="."]
-position = Vector2(318, 326)
-scale = Vector2(2.5, 2.84375)
-texture = ExtResource("2_qefjs")
+position = Vector2(614, 410)
+scale = Vector2(4, 4.54)
+texture = ExtResource("2_btbyl")
 
 [node name="Camera2D" type="Camera2D" parent="olaf"]
 position = Vector2(0.800018, 1.05495)
@@ -206,10 +206,10 @@ anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 204.0
-offset_top = 379.0
-offset_right = 1023.0
-offset_bottom = 581.0
+offset_left = 208.0
+offset_top = 425.0
+offset_right = 1027.0
+offset_bottom = 627.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/normal_font = ExtResource("3_kj8s3")

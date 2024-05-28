@@ -1,11 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c715ghqoolykp"]
+[gd_scene load_steps=8 format=3 uid="uid://c715ghqoolykp"]
 
-[ext_resource type="Script" path="res://scripts/CharacterBody2D.gd" id="1_o74b3"]
-[ext_resource type="Texture2D" uid="uid://iivqp0gp6twt" path="res://assets/pixil-frame-0 (4).png" id="2_v3rbw"]
-[ext_resource type="Texture2D" uid="uid://cltcmwvlj3vww" path="res://assets/image_article_muizen.webp" id="3_5sdbn"]
-[ext_resource type="Script" path="res://scripts/ImageArticleMuizen.gd" id="4_ip3ar"]
-
-[sub_resource type="TileSet" id="TileSet_814ka"]
+[ext_resource type="Script" path="res://scripts/CharacterBody2D.gd" id="1_nggyk"]
+[ext_resource type="Texture2D" uid="uid://iivqp0gp6twt" path="res://assets/pixil-frame-0 (4).png" id="2_tasbu"]
+[ext_resource type="Texture2D" uid="uid://cltcmwvlj3vww" path="res://assets/image_article_muizen.webp" id="3_ay1r7"]
+[ext_resource type="Script" path="res://scripts/ImageArticleMuizen.gd" id="4_ce3mw"]
 
 [sub_resource type="Animation" id="Animation_4jigg"]
 length = 0.001
@@ -48,21 +46,13 @@ _data = {
 
 [node name="Node2D" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_814ka")
-format = 2
-layer_0/name = "Background"
-layer_0/tile_data = PackedInt32Array(-65534, 327680, 10, -65533, 196608, 10, -65532, 196608, 10, 4, 196608, 10, 3, 196608, 10, 2, 196608, 10, 65538, 196608, 10, 65539, 327680, 10, 65540, 196608, 10, 131077, 262144, 11, -131067, 262144, 9, -131071, 196608, 9, 131073, 196608, 11, -131070, 196608, 9, -131069, 196608, 9, -131068, 196608, 9, -65531, 262144, 10, 5, 262144, 10, 65541, 262144, 10, 131074, 196608, 11, 131075, 196608, 11, 131076, 196608, 11, -65535, 327680, 10, 1, 196608, 10, 65537, 196608, 10, 131072, 196608, 11, 196607, 196608, 11, 196606, 131072, 11, -65538, 131072, 9, -131072, 196608, 9, -65537, 196608, 9, -65536, 196608, 10, 65536, 327680, 10, 131071, 196608, 10, 65535, 327680, 10, -1, 196608, 10, 0, 0, 11, 65534, 131072, 10, -2, 131072, 10, 131070, 131072, 10)
-layer_1/name = "Foreground"
-layer_1/tile_data = PackedInt32Array(4, 458752, 4, -65534, 327680, 8, -65533, 393216, 8, -65532, 458752, 8, 65540, 458752, 5)
-
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(-5, -5)
-script = ExtResource("1_o74b3")
+script = ExtResource("1_nggyk")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(29, 33)
-texture = ExtResource("2_v3rbw")
+texture = ExtResource("2_tasbu")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D/Sprite2D"]
 position = Vector2(-1, -2)
@@ -71,8 +61,8 @@ zoom = Vector2(5, 5)
 [node name="ImageArticleMuizen" type="Sprite2D" parent="."]
 position = Vector2(72, 10)
 scale = Vector2(0.18, 0.18)
-texture = ExtResource("3_5sdbn")
-script = ExtResource("4_ip3ar")
+texture = ExtResource("3_ay1r7")
+script = ExtResource("4_ce3mw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ImageArticleMuizen"]
 libraries = {
