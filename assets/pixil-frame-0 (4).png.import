@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cltcmwvlj3vww"
-path="res://.godot/imported/image_article_muizen.webp-ce148c111a775ffab27b2390fdd89e39.ctex"
+uid="uid://iivqp0gp6twt"
+path="res://.godot/imported/pixil-frame-0 (4).png-75e3618916635664201450310f910f85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://image_article_muizen.webp"
-dest_files=["res://.godot/imported/image_article_muizen.webp-ce148c111a775ffab27b2390fdd89e39.ctex"]
+source_file="res://assets/pixil-frame-0 (4).png"
+dest_files=["res://.godot/imported/pixil-frame-0 (4).png-75e3618916635664201450310f910f85.ctex"]
 
 [params]
 

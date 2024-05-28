@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://c715ghqoolykp"]
 
-[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_6lrks"]
-[ext_resource type="Texture2D" uid="uid://iivqp0gp6twt" path="res://pixil-frame-0 (4).png" id="2_a0ukd"]
-[ext_resource type="Texture2D" uid="uid://cltcmwvlj3vww" path="res://image_article_muizen.webp" id="3_bjnly"]
-[ext_resource type="Script" path="res://ImageArticleMuizen.gd" id="4_pqusu"]
+[ext_resource type="Script" path="res://scripts/CharacterBody2D.gd" id="1_o74b3"]
+[ext_resource type="Texture2D" uid="uid://iivqp0gp6twt" path="res://assets/pixil-frame-0 (4).png" id="2_v3rbw"]
+[ext_resource type="Texture2D" uid="uid://cltcmwvlj3vww" path="res://assets/image_article_muizen.webp" id="3_5sdbn"]
+[ext_resource type="Script" path="res://scripts/ImageArticleMuizen.gd" id="4_ip3ar"]
 
 [sub_resource type="TileSet" id="TileSet_814ka"]
 
@@ -58,11 +58,11 @@ layer_1/tile_data = PackedInt32Array(4, 458752, 4, -65534, 327680, 8, -65533, 39
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(-5, -5)
-script = ExtResource("1_6lrks")
+script = ExtResource("1_o74b3")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(29, 33)
-texture = ExtResource("2_a0ukd")
+texture = ExtResource("2_v3rbw")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D/Sprite2D"]
 position = Vector2(-1, -2)
@@ -71,8 +71,8 @@ zoom = Vector2(5, 5)
 [node name="ImageArticleMuizen" type="Sprite2D" parent="."]
 position = Vector2(72, 10)
 scale = Vector2(0.18, 0.18)
-texture = ExtResource("3_bjnly")
-script = ExtResource("4_pqusu")
+texture = ExtResource("3_5sdbn")
+script = ExtResource("4_ip3ar")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ImageArticleMuizen"]
 libraries = {

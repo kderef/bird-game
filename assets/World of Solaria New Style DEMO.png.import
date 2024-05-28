@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://iivqp0gp6twt"
-path="res://.godot/imported/pixil-frame-0 (4).png-bba574f4ee8b3d6f35413ea708a3e78b.ctex"
+uid="uid://c21y7hapnp06n"
+path="res://.godot/imported/World of Solaria New Style DEMO.png-1598d92a2c7770a27c1eecc131b9e78e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixil-frame-0 (4).png"
-dest_files=["res://.godot/imported/pixil-frame-0 (4).png-bba574f4ee8b3d6f35413ea708a3e78b.ctex"]
+source_file="res://assets/World of Solaria New Style DEMO.png"
+dest_files=["res://.godot/imported/World of Solaria New Style DEMO.png-1598d92a2c7770a27c1eecc131b9e78e.ctex"]
 
 [params]
 
