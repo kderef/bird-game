@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bw8lbe8xlm3da"]
+[gd_scene load_steps=17 format=3 uid="uid://bw8lbe8xlm3da"]
 
 [ext_resource type="Texture2D" uid="uid://c21y7hapnp06n" path="res://assets/World of Solaria New Style DEMO.png" id="1_httn4"]
 [ext_resource type="Texture2D" uid="uid://gcw350ao35dk" path="res://assets/olaf3.png" id="2_btbyl"]
@@ -129,6 +129,26 @@ texture = ExtResource("1_httn4")
 [sub_resource type="TileSet" id="TileSet_3a6qf"]
 sources/0 = SubResource("TileSetAtlasSource_j62f6")
 
+[sub_resource type="Animation" id="Animation_6jywb"]
+resource_name = "olafidle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cgp1w"]
+_data = {
+"olafidle": SubResource("Animation_6jywb")
+}
+
 [sub_resource type="Animation" id="Animation_8f7rp"]
 length = 0.001
 tracks/0/type = "value"
@@ -189,6 +209,11 @@ texture = ExtResource("2_btbyl")
 [node name="Camera2D" type="Camera2D" parent="olaf"]
 position = Vector2(0.800018, 1.05495)
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="olaf"]
+libraries = {
+"": SubResource("AnimationLibrary_cgp1w")
+}
+
 [node name="Muiskes" type="Sprite2D" parent="."]
 position = Vector2(1759, 370)
 scale = Vector2(0.5, 0.5)
@@ -230,7 +255,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("3_kj8s3")
 theme_override_font_sizes/font_size = 65
-text = "PLAY"
+text = "PLAY
+"
 icon = SubResource("ImageTexture_v41sn")
 script = ExtResource("4_6lyak")
 
