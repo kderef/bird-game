@@ -3,10 +3,7 @@ extends CharacterBody2D
 var speed = 60  # speed in pixels/sec
 
 func _physics_process(delta):
-	if velocity == Vector2(0, 0):
-		$Sprite2D/olafanim.play("idle-loop")
-	if velocity > Vector2(0,0):
-		$Sprite2D/olafanim.stop()
+	#movement
 	var direction = Input.get_vector("left", "right", "up", "down")
 	velocity = direction * speed
 	if Input.is_action_pressed("left"):
@@ -21,9 +18,9 @@ func _physics_process(delta):
 		speed = 80
 	if Input.is_action_just_released("run"):
 		speed = 60
-
-		
-
-
 	move_and_slide()
 	
+	if velocity == Vector2(0, 0):
+		$Sprite2D/olafanim.play("idle-loop")
+	if velocity > Vector2(0,0):
+		$Sprite2D/olafanim.stop()

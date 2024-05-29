@@ -1,10 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://c715ghqoolykp"]
+[gd_scene load_steps=19 format=3 uid="uid://c715ghqoolykp"]
 
 [ext_resource type="Texture2D" uid="uid://c21y7hapnp06n" path="res://assets/World of Solaria New Style DEMO.png" id="1_sagwa"]
 [ext_resource type="Texture2D" uid="uid://cltcmwvlj3vww" path="res://assets/image_article_muizen.webp" id="3_ay1r7"]
 [ext_resource type="Script" path="res://scripts/ImageArticleMuizen.gd" id="4_ce3mw"]
 [ext_resource type="Script" path="res://scenes/CharacterBody2D2.gd" id="4_kxlhm"]
 [ext_resource type="Texture2D" uid="uid://1st5rlr18lyy" path="res://assets/spritesheet.png" id="5_htis6"]
+[ext_resource type="Texture2D" uid="uid://xj2mqd6jk7ud" path="res://assets/muiskes.png" id="6_5quls"]
+[ext_resource type="Script" path="res://scripts/Muiskes.gd" id="7_mvllp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_txjy3"]
 texture = ExtResource("1_sagwa")
@@ -191,11 +193,52 @@ _data = {
 "idle-loop": SubResource("Animation_r001v")
 }
 
+[sub_resource type="Animation" id="Animation_8f7rp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1759, 370)]
+}
+
+[sub_resource type="Animation" id="Animation_cwihv"]
+resource_name = "muiskesbounce-loop"
+length = 2.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(0.297302, 2.07053, 1.7411),
+"update": 0,
+"values": [Vector2(-30, 370), Vector2(-30, 300), Vector2(-30, 370)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wvlby"]
+_data = {
+"RESET": SubResource("Animation_8f7rp"),
+"muiskesbounce-loop": SubResource("Animation_cwihv")
+}
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_o2aeq")
 format = 2
+layer_0/name = "foreground"
+layer_1/name = "background"
+layer_1/tile_data = PackedInt32Array(65535, 196608, 10, 131071, 196608, 10, 196607, 196608, 10, 262143, 196608, 10, 327679, 196608, 10, 262144, 196608, 10, 196608, 196608, 10, 131072, 196608, 10, 65536, 196608, 10, 0, 196608, 10, -65536, 196608, 10, -131072, 196608, 10, -131073, 196608, 10, -65537, 196608, 10, -1, 196608, 10, -196608, 196608, 10, 393215, 196608, 10, 458751, 196608, 10, 524287, 196608, 10, 589823, 196608, 10, 655359, 196608, 10, 720895, 196608, 10, 786431, 196608, 10, 851967, 196608, 10, 917503, 196608, 10, 983039, 196608, 10, 1048575, 196608, 10, 1114111, 196608, 10, 1179647, 196608, 10, 1245183, 196608, 10, 327680, 196608, 10, 393216, 196608, 10, 458752, 196608, 10, 524288, 196608, 10, 589824, 196608, 10, 655360, 196608, 10, 720896, 196608, 10, 786432, 196608, 10, 851968, 196608, 10, 917504, 196608, 10, 983040, 196608, 10, 1048576, 196608, 10, 1114112, 196608, 10, 1179648, 196608, 10, -131074, 131072, 10, -65538, 131072, 10, -2, 131072, 10, 65534, 131072, 10, 131070, 131072, 10, 196606, 131072, 10, 262142, 131072, 10, 327678, 131072, 10, 393214, 131072, 10, 458750, 131072, 10, 524286, 131072, 10, 589822, 131072, 10, 655358, 131072, 10, 720894, 131072, 10, 786430, 131072, 10, 851966, 131072, 10, 917502, 131072, 10, 983038, 131072, 10, 1048574, 131072, 10, 1114110, 131072, 10, 1179646, 131072, 10, 1245182, 131072, 10, -196610, 131072, 9, -262143, 262144, 9, -196609, 196608, 9, -262144, 196608, 9, -196607, 262144, 10, -131071, 262144, 10, -65535, 262144, 10, 1, 262144, 10, 65537, 262144, 10, 131073, 262144, 10, 196609, 262144, 10, 262145, 262144, 10, 327681, 262144, 10, 393217, 262144, 10, 458753, 262144, 10, 524289, 262144, 10, 589825, 262144, 10, 655361, 262144, 10, 720897, 262144, 10, 786433, 262144, 10, 851969, 262144, 10, 917505, 262144, 10, 983041, 262144, 10, 1048577, 262144, 10, 1114113, 262144, 10, 1179649, 262144, 10, 1245185, 262144, 11, 1310718, 131072, 11, 1310719, 196608, 11, 1245184, 196608, 11)
 
 [node name="ImageArticleMuizen" type="Sprite2D" parent="."]
 position = Vector2(72, 10)
@@ -213,6 +256,7 @@ scale = Vector2(0.1, 0.1)
 script = ExtResource("4_kxlhm")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
+position = Vector2(-10, -330)
 scale = Vector2(1, 1)
 texture = ExtResource("5_htis6")
 hframes = 5
@@ -226,3 +270,14 @@ speed_scale = 2.0
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D2/Sprite2D"]
 scale = Vector2(1, 1)
 zoom = Vector2(4, 4)
+
+[node name="Muiskes" type="Sprite2D" parent="."]
+position = Vector2(1759, 370)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_5quls")
+script = ExtResource("7_mvllp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Muiskes"]
+libraries = {
+"": SubResource("AnimationLibrary_wvlby")
+}
