@@ -277,3 +277,14 @@ theme_override_fonts/font = ExtResource("3_kj8s3")
 theme_override_font_sizes/font_size = 65
 text = "EXIT"
 script = ExtResource("6_gn5t3")
+
+[node name="btn_play2" type="Button" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_kj8s3")
+theme_override_font_sizes/font_size = 65
+text = "TEST
+"
+icon = SubResource("ImageTexture_v41sn")
+script = ExtResource("4_6lyak")
