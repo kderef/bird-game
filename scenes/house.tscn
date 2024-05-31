@@ -1,0 +1,144 @@
+[gd_scene load_steps=12 format=3 uid="uid://cqg7duofkj4rt"]
+
+[ext_resource type="Texture2D" uid="uid://cw2ku2l76c0el" path="res://backgrounds/_rasterize.jpg" id="1_at2qx"]
+[ext_resource type="Texture2D" uid="uid://dlg3hd7hbry1q" path="res://backgrounds/room.png" id="1_mroxe"]
+[ext_resource type="Texture2D" uid="uid://b112t4q078q4w" path="res://assets/PC Computer - Stardew Valley - Leah sprites goed.png" id="3_jp4y0"]
+[ext_resource type="Script" path="res://scenes/CharacterBody2D2.gd" id="4_dbbxk"]
+[ext_resource type="Texture2D" uid="uid://1st5rlr18lyy" path="res://assets/spritesheet.png" id="5_2bbhd"]
+
+[sub_resource type="Animation" id="Animation_sk834"]
+resource_name = "girlwalk"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 4, 5, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(124, 195), Vector2(169, 203)]
+}
+
+[sub_resource type="Animation" id="Animation_n6scj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(169, 203)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cdb7t"]
+_data = {
+"RESET": SubResource("Animation_n6scj"),
+"girlwalk": SubResource("Animation_sk834")
+}
+
+[sub_resource type="Animation" id="Animation_sa3mm"]
+resource_name = "Reset"
+
+[sub_resource type="Animation" id="Animation_r001v"]
+resource_name = "idle-loop"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.3, 1.9, 2.8, 3.4, 3.6),
+"transitions": PackedFloat32Array(1, 1.03526, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 2, 3, 1, 1, 4, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_156tg"]
+_data = {
+"Reset": SubResource("Animation_sa3mm"),
+"idle-loop": SubResource("Animation_r001v")
+}
+
+[node name="House" type="Node2D"]
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -194.0
+offset_top = -76.0
+offset_right = 516.0
+offset_bottom = 374.0
+texture = ExtResource("1_at2qx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2, 2)
+texture = ExtResource("1_mroxe")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(159, 148)
+zoom = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(169, 203)
+scale = Vector2(2, 1.972)
+texture = ExtResource("3_jp4y0")
+hframes = 4
+vframes = 4
+frame = 4
+region_enabled = true
+region_rect = Rect2(1, 0, 62, 133.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_cdb7t")
+}
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("4_dbbxk")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
+position = Vector2(2440, 2120)
+texture = ExtResource("5_2bbhd")
+flip_h = true
+hframes = 5
+
+[node name="olafanim" type="AnimationPlayer" parent="CharacterBody2D2/Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_156tg")
+}
+speed_scale = 2.0
