@@ -13,7 +13,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("right"):
 		$Sprite2D.flip_h = false
 		$Sprite2D.flip_v = false
-
+		
 	if Input.is_action_just_pressed("run"):
 		speed = 80
 	if Input.is_action_just_released("run"):
