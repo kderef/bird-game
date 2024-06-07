@@ -9,10 +9,16 @@ func _physics_process(delta):
 	if Input.is_action_pressed("left"):
 		$Sprite2D.flip_h = true
 		$Sprite2D.flip_v = false
-
-	if Input.is_action_just_pressed("right"):
+		$Sprite2D/olafanim.play("walk-loop")
+	elif Input.is_action_just_pressed("right"):
 		$Sprite2D.flip_h = false
-		$Sprite2D.flip_v = false
+		$Sprite2D/olafanim.play("walk-loop")
+	elif Input.is_action_pressed("up"):
+		$Sprite2D/olafanim.play("walk-loop")
+	elif Input.is_action_pressed("down"):
+		$Sprite2D/olafanim.play("walk-loop")
+	else:
+		$Sprite2D/olafanim.play("idle")
 		
 	if Input.is_action_just_pressed("run"):
 		speed = 80
@@ -20,7 +26,5 @@ func _physics_process(delta):
 		speed = 60
 	move_and_slide()
 	
-	if velocity == Vector2(0, 0):
-		$Sprite2D/olafanim.play("idle-loop")
-	if velocity > Vector2(0,0):
-		$Sprite2D/olafanim.stop()
+
+		

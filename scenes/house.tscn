@@ -1,10 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://cqg7duofkj4rt"]
+[gd_scene load_steps=30 format=3 uid="uid://cqg7duofkj4rt"]
 
 [ext_resource type="Texture2D" uid="uid://cf0simo360hw2" path="res://backgrounds/black.jpg" id="1_dkhmk"]
 [ext_resource type="Texture2D" uid="uid://dlg3hd7hbry1q" path="res://backgrounds/room.png" id="1_mroxe"]
 [ext_resource type="Texture2D" uid="uid://b112t4q078q4w" path="res://assets/PC Computer - Stardew Valley - Leah sprites goed.png" id="3_jp4y0"]
 [ext_resource type="Script" path="res://scenes/CharacterBody2D2.gd" id="4_dbbxk"]
-[ext_resource type="Texture2D" uid="uid://8f6qunq5milr" path="res://assets/Olaf/spritesheet.png" id="5_kpjkd"]
+[ext_resource type="Texture2D" uid="uid://pqoknlesc3jl" path="res://assets/Olaf/walking/spritesheet (4).png" id="4_x8o5l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8dpsv"]
 size = Vector2(18, 16)
@@ -27,10 +27,9 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_sa3mm"]
 resource_name = "Reset"
 
-[sub_resource type="Animation" id="Animation_r001v"]
-resource_name = "idle-loop"
-length = 10.0
-loop_mode = 1
+[sub_resource type="Animation" id="Animation_byopf"]
+resource_name = "walk-loop"
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -38,17 +37,34 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.7, 3.2, 7.82543, 8.32543),
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.6, 4, 4.4, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0]
+}
+
+[sub_resource type="Animation" id="Animation_r001v"]
+resource_name = "idle"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.7, 3.2, 7.9, 8.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [1, 0, 1, 0, 1]
+"values": [0, 1, 0, 1, 0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_156tg"]
 _data = {
 "RESET": SubResource("Animation_y3jmy"),
 "Reset": SubResource("Animation_sa3mm"),
-"idle-loop": SubResource("Animation_r001v")
+"idle": SubResource("Animation_r001v"),
+"walk-loop": SubResource("Animation_byopf")
 }
 
 [sub_resource type="Animation" id="Animation_n6scj"]
@@ -187,9 +203,9 @@ shape = SubResource("RectangleShape2D_8dpsv")
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
 position = Vector2(2420, 2140)
 scale = Vector2(15, 15)
-texture = ExtResource("5_kpjkd")
+texture = ExtResource("4_x8o5l")
 flip_h = true
-hframes = 2
+hframes = 7
 frame = 1
 
 [node name="olafanim" type="AnimationPlayer" parent="CharacterBody2D2/Sprite2D"]
@@ -197,6 +213,8 @@ libraries = {
 "": SubResource("AnimationLibrary_156tg")
 }
 speed_scale = 2.54
+
+[node name="olafwalk" type="AnimationPlayer" parent="CharacterBody2D2/Sprite2D"]
 
 [node name="vrouw" type="Sprite2D" parent="."]
 position = Vector2(169, 203)
