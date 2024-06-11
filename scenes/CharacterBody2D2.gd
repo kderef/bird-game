@@ -10,7 +10,7 @@ func _physics_process(delta):
 		$Sprite2D.flip_h = true
 		$Sprite2D.flip_v = false
 		$Sprite2D/olafanim.play("walk-loop")
-	elif Input.is_action_just_pressed("right"):
+	elif Input.is_action_pressed("right"):
 		$Sprite2D.flip_h = false
 		$Sprite2D/olafanim.play("walk-loop")
 	elif Input.is_action_pressed("up"):
@@ -25,6 +25,3 @@ func _physics_process(delta):
 	if Input.is_action_just_released("run"):
 		speed = 60
 	move_and_slide()
-	
-
-		
