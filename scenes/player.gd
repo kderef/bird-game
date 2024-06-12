@@ -7,18 +7,18 @@ func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
 	velocity = direction * speed
 	if Input.is_action_pressed("left"):
-		$Sprite2D2.flip_h = true
-		$Sprite2D2.flip_v = false
-		$Sprite2D2/olafanim.play("walk-loop")
+		$player_sprite.flip_h = true
+		$player_sprite.flip_v = false
+		$player_sprite/olafanim.play("walk-loop")
 	elif Input.is_action_pressed("right"):
-		$Sprite2D2.flip_h = false
-		$Sprite2D2/olafanim.play("walk-loop")
+		$player_sprite.flip_h = false
+		$player_sprite/olafanim.play("walk-loop")
 	elif Input.is_action_pressed("up"):
-		$Sprite2D2/olafanim.play("walk-loop")
+		$player_sprite/olafanim.play("walk-loop")
 	elif Input.is_action_pressed("down"):
-		$Sprite2D2/olafanim.play("walk-loop")
+		$player_sprite/olafanim.play("walk-loop")
 	else:
-		$Sprite2D2/olafanim.play("idle")
+		$player_sprite/olafanim.play("idle")
 		
 	if Input.is_action_just_pressed("run"):
 		speed = 80

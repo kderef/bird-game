@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://blxdgb7gr7ncw"]
 
-[ext_resource type="Script" path="res://scenes/CharacterBody2D2.gd" id="1_jjb2c"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_01pqu"]
 [ext_resource type="Texture2D" uid="uid://doqajo0bnmcji" path="res://assets/Olaf/walking/spritesheet (4).png" id="2_xsfld"]
 
 [sub_resource type="Animation" id="Animation_y3jmy"]
@@ -66,9 +66,9 @@ size = Vector2(18, 16)
 
 [node name="CharacterBody2D2" type="CharacterBody2D"]
 scale = Vector2(0.1, 0.1)
-script = ExtResource("1_jjb2c")
+script = ExtResource("1_01pqu")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="player_sprite" type="Sprite2D" parent="."]
 position = Vector2(242, 214)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_xsfld")
@@ -76,15 +76,15 @@ flip_h = true
 hframes = 7
 frame = 1
 
-[node name="olafanim" type="AnimationPlayer" parent="Sprite2D2"]
+[node name="olafanim" type="AnimationPlayer" parent="player_sprite"]
 libraries = {
 "": SubResource("AnimationLibrary_156tg")
 }
 speed_scale = 2.54
 
-[node name="olafwalk" type="AnimationPlayer" parent="Sprite2D2"]
+[node name="olafwalk" type="AnimationPlayer" parent="player_sprite"]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="player_collision" type="CollisionShape2D" parent="."]
 position = Vector2(243, 218)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_c2p0u")
