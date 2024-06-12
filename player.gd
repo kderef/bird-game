@@ -25,3 +25,4 @@ func _physics_process(delta):
 	if Input.is_action_just_released("run"):
 		speed = 60
 	move_and_slide()
+
