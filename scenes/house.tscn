@@ -144,62 +144,62 @@ libraries = {
 "": SubResource("AnimationLibrary_cdb7t")
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="room" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_q2rpd")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="col_table" type="CollisionShape2D" parent="room"]
 position = Vector2(225, 162)
 shape = SubResource("RectangleShape2D_qrjcw")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="col_counters" type="CollisionShape2D" parent="room"]
 position = Vector2(193, 94)
 shape = SubResource("RectangleShape2D_s651b")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="col_wall_down" type="CollisionShape2D" parent="room"]
 position = Vector2(163, 284.5)
 shape = SubResource("RectangleShape2D_ona4k")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="col_wall_right" type="CollisionShape2D" parent="room"]
 position = Vector2(329, 151)
 shape = SubResource("RectangleShape2D_0slue")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="col_wall_left" type="CollisionShape2D" parent="room"]
 position = Vector2(5, 141)
 shape = SubResource("RectangleShape2D_fi28e")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="col_wall_up" type="CollisionShape2D" parent="room"]
 position = Vector2(162.5, 38)
 shape = SubResource("RectangleShape2D_lpwg4")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="col_bedside_table" type="CollisionShape2D" parent="room"]
 position = Vector2(98, 258)
 shape = SubResource("RectangleShape2D_yb0xk")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="col_chair_left" type="CollisionShape2D" parent="room"]
 position = Vector2(162, 161)
 shape = SubResource("RectangleShape2D_gw261")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="col_chair_right" type="CollisionShape2D" parent="room"]
 position = Vector2(290, 161)
 shape = SubResource("RectangleShape2D_8flv3")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="col_chair_up" type="CollisionShape2D" parent="room"]
 position = Vector2(226, 124)
 shape = SubResource("RectangleShape2D_ar0fk")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="col_candle" type="CollisionShape2D" parent="room"]
 position = Vector2(97, 235)
 shape = SubResource("RectangleShape2D_0xl0b")
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="col_tv" type="CollisionShape2D" parent="room"]
 position = Vector2(66, 87.5)
 shape = SubResource("RectangleShape2D_rabbs")
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="col_chair_left_top" type="CollisionShape2D" parent="room"]
 position = Vector2(156, 149)
 shape = SubResource("RectangleShape2D_qkxsh")
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="col_bed" type="CollisionShape2D" parent="room"]
 position = Vector2(48, 243)
 shape = SubResource("RectangleShape2D_ba3xx")
 

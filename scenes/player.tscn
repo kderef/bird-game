@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://blxdgb7gr7ncw"]
 
-[ext_resource type="Script" path="res://scenes/player.gd" id="1_01pqu"]
+[ext_resource type="Script" path="res://player.gd" id="1_c4m5n"]
 [ext_resource type="Texture2D" uid="uid://doqajo0bnmcji" path="res://assets/Olaf/walking/spritesheet (4).png" id="2_xsfld"]
 
 [sub_resource type="Animation" id="Animation_y3jmy"]
@@ -66,7 +66,7 @@ size = Vector2(18, 16)
 
 [node name="CharacterBody2D2" type="CharacterBody2D"]
 scale = Vector2(0.1, 0.1)
-script = ExtResource("1_01pqu")
+script = ExtResource("1_c4m5n")
 
 [node name="player_sprite" type="Sprite2D" parent="."]
 position = Vector2(242, 214)
