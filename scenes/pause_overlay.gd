@@ -10,8 +10,8 @@ func resize():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	camera = get_node("/root/Node2D/CharacterBody2D2/Sprite2D/Camera2D")
-	pause_ui = get_node("/root/Node2D/CharacterBody2D2/Sprite2D/Camera2D/pause_ui")
+	camera = get_node("/root/Node2D/Player/camera")
+	pause_ui = get_node("pause_menu/pause_ui")
 	visible = false
 	pause_ui.visible = false
 	size = get_viewport_rect().size

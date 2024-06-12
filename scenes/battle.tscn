@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cpca77ej1yb0r"]
 
-[ext_resource type="Texture2D" uid="uid://cpsbn4qsq0hrk" path="res://assets/battle-bg.webp" id="1_tvyub"]
+[ext_resource type="Texture2D" uid="uid://b1sg6amj80p7k" path="res://assets/battle-bg.webp" id="1_tvyub"]
 
 [node name="Battle" type="Node2D"]
 
@@ -18,7 +18,3 @@ offset_top = 68.0
 offset_right = 1114.0
 offset_bottom = 636.0
 color = Color(0, 0, 0, 0.639216)
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-offset_right = 1148.0
-offset_bottom = 669.0

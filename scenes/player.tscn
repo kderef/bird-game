@@ -1,0 +1,90 @@
+[gd_scene load_steps=9 format=3 uid="uid://blxdgb7gr7ncw"]
+
+[ext_resource type="Script" path="res://scenes/CharacterBody2D2.gd" id="1_jjb2c"]
+[ext_resource type="Texture2D" uid="uid://doqajo0bnmcji" path="res://assets/Olaf/walking/spritesheet (4).png" id="2_xsfld"]
+
+[sub_resource type="Animation" id="Animation_y3jmy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_sa3mm"]
+resource_name = "Reset"
+
+[sub_resource type="Animation" id="Animation_r001v"]
+resource_name = "idle"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.7, 3.2, 7.9, 8.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_byopf"]
+resource_name = "walk-loop"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.6, 4, 4.4, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_156tg"]
+_data = {
+"RESET": SubResource("Animation_y3jmy"),
+"Reset": SubResource("Animation_sa3mm"),
+"idle": SubResource("Animation_r001v"),
+"walk-loop": SubResource("Animation_byopf")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c2p0u"]
+size = Vector2(18, 16)
+
+[node name="CharacterBody2D2" type="CharacterBody2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_jjb2c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(242, 214)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_xsfld")
+flip_h = true
+hframes = 7
+frame = 1
+
+[node name="olafanim" type="AnimationPlayer" parent="Sprite2D2"]
+libraries = {
+"": SubResource("AnimationLibrary_156tg")
+}
+speed_scale = 2.54
+
+[node name="olafwalk" type="AnimationPlayer" parent="Sprite2D2"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(243, 218)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_c2p0u")
