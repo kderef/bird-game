@@ -1,6 +1,75 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpca77ej1yb0r"]
+[gd_scene load_steps=19 format=3 uid="uid://cpca77ej1yb0r"]
 
-[ext_resource type="Texture2D" uid="uid://b1sg6amj80p7k" path="res://assets/battle-bg.webp" id="1_tvyub"]
+[ext_resource type="Texture2D" uid="uid://m0uup7fwqbh2" path="res://assets/battle-bg.webp" id="1_tvyub"]
+[ext_resource type="Texture2D" uid="uid://d1nbs6c6c1bcr" path="res://backgrounds/bg-gif/frame_00_delay-0.1s.jpg" id="2_j886t"]
+[ext_resource type="Texture2D" uid="uid://pl4umlrtubva" path="res://backgrounds/bg-gif/frame_01_delay-0.1s.jpg" id="3_iq5ux"]
+[ext_resource type="Texture2D" uid="uid://b4h2k1v350wob" path="res://backgrounds/bg-gif/frame_02_delay-0.1s.jpg" id="4_a0msu"]
+[ext_resource type="Texture2D" uid="uid://up0kwf7h16nh" path="res://backgrounds/bg-gif/frame_03_delay-0.1s.jpg" id="5_pk0in"]
+[ext_resource type="Texture2D" uid="uid://25aav5ixqql6" path="res://backgrounds/bg-gif/frame_04_delay-0.1s.jpg" id="6_fm0ef"]
+[ext_resource type="Texture2D" uid="uid://cv5gqp2il0463" path="res://backgrounds/bg-gif/frame_05_delay-0.1s.jpg" id="7_23pjf"]
+[ext_resource type="Texture2D" uid="uid://mhu5b68tk47p" path="res://backgrounds/bg-gif/frame_06_delay-0.1s.jpg" id="8_38bxf"]
+[ext_resource type="Texture2D" uid="uid://duh5fjykggc5p" path="res://backgrounds/bg-gif/frame_07_delay-0.1s.jpg" id="9_j7w3f"]
+[ext_resource type="Texture2D" uid="uid://dyqnu8abqv4hu" path="res://backgrounds/bg-gif/frame_08_delay-0.1s.jpg" id="10_4eqj2"]
+[ext_resource type="Texture2D" uid="uid://dly03324qwyfs" path="res://backgrounds/bg-gif/frame_09_delay-0.1s.jpg" id="11_y8uoa"]
+[ext_resource type="Texture2D" uid="uid://cgwklaarvqton" path="res://backgrounds/bg-gif/frame_10_delay-0.1s.jpg" id="12_uylmd"]
+[ext_resource type="Texture2D" uid="uid://csgho1fwpim2o" path="res://backgrounds/bg-gif/frame_11_delay-0.1s.jpg" id="13_ik2t7"]
+[ext_resource type="Texture2D" uid="uid://c8qj72nsxp6ut" path="res://backgrounds/bg-gif/frame_12_delay-0.1s.jpg" id="14_a4ccs"]
+[ext_resource type="Texture2D" uid="uid://u65ol0o8i8g0" path="res://backgrounds/bg-gif/frame_13_delay-0.1s.jpg" id="15_dssw6"]
+[ext_resource type="Texture2D" uid="uid://1gnobsngw7q0" path="res://backgrounds/bg-gif/frame_14_delay-0.1s.jpg" id="16_n6hbe"]
+[ext_resource type="Script" path="res://scripts/battle_overlay.gd" id="17_cd1nt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_spuf1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j886t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iq5ux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a0msu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pk0in")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fm0ef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_23pjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_38bxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_j7w3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4eqj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_y8uoa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_uylmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ik2t7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_a4ccs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_dssw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_n6hbe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Battle" type="Node2D"]
 
@@ -9,8 +78,21 @@ offset_right = 1154.0
 offset_bottom = 647.0
 texture = ExtResource("1_tvyub")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.380392)
+self_modulate = Color(0, 0.577177, 0.849272, 1)
+texture_filter = 1
+position = Vector2(575.5, 375.5)
+scale = Vector2(4.49609, 3.33482)
+sprite_frames = SubResource("SpriteFrames_spuf1")
+frame = 12
+frame_progress = 0.633841
+speed_scale = 2.0
+script = ExtResource("17_cd1nt")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 354)
+zoom = Vector2(1.015, 1.015)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 40.0

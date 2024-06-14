@@ -1,15 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://c715ghqoolykp"]
+[gd_scene load_steps=15 format=3 uid="uid://c715ghqoolykp"]
 
-[ext_resource type="Texture2D" uid="uid://cr3gt5wmpxl5v" path="res://assets/World of Solaria New Style DEMO.png" id="1_sagwa"]
-[ext_resource type="Texture2D" uid="uid://b0mncujl5tk36" path="res://assets/image_article_muizen.webp" id="3_ay1r7"]
+[ext_resource type="Texture2D" uid="uid://4vkltr4x4hxb" path="res://assets/World of Solaria New Style DEMO.png" id="1_sagwa"]
+[ext_resource type="Texture2D" uid="uid://ba64bayalk7ns" path="res://assets/image_article_muizen.webp" id="3_ay1r7"]
 [ext_resource type="Script" path="res://scripts/ImageArticleMuizen.gd" id="4_ce3mw"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="4_kxlhm"]
-[ext_resource type="Texture2D" uid="uid://cvb0nsexg8kgp" path="res://assets/spritesheet.png" id="5_htis6"]
-[ext_resource type="Texture2D" uid="uid://blgnvlriwgmjq" path="res://assets/muiskes.png" id="6_5quls"]
+[ext_resource type="Texture2D" uid="uid://d3uyfwbydm8dk" path="res://assets/muiskes.png" id="6_5quls"]
+[ext_resource type="PackedScene" uid="uid://blxdgb7gr7ncw" path="res://scenes/player.tscn" id="6_xiwwx"]
 [ext_resource type="Script" path="res://scripts/Muiskes.gd" id="7_mvllp"]
-[ext_resource type="Script" path="res://scripts/pause_overlay.gd" id="8_eiic4"]
-[ext_resource type="Script" path="res://scripts/pause_menu.gd" id="8_upktt"]
-[ext_resource type="FontFile" uid="uid://bx2puip42gnq4" path="res://assets/small_bold_pixel-7.ttf" id="9_34lxy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_txjy3"]
 texture = ExtResource("1_sagwa")
@@ -170,32 +166,6 @@ _data = {
 "bobbing-loop": SubResource("Animation_4dkom")
 }
 
-[sub_resource type="Animation" id="Animation_sa3mm"]
-resource_name = "Reset"
-
-[sub_resource type="Animation" id="Animation_r001v"]
-resource_name = "idle-loop"
-length = 10.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7, 1.3, 1.9, 2.8, 3.4, 3.6),
-"transitions": PackedFloat32Array(1, 1.03526, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 2, 3, 1, 1, 4, 0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_156tg"]
-_data = {
-"Reset": SubResource("Animation_sa3mm"),
-"idle-loop": SubResource("Animation_r001v")
-}
-
 [sub_resource type="Animation" id="Animation_8f7rp"]
 length = 0.001
 tracks/0/type = "value"
@@ -254,25 +224,6 @@ libraries = {
 "": SubResource("AnimationLibrary_jenac")
 }
 
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
-scale = Vector2(0.1, 0.1)
-script = ExtResource("4_kxlhm")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
-position = Vector2(-10, -330)
-texture = ExtResource("5_htis6")
-hframes = 5
-
-[node name="olafanim" type="AnimationPlayer" parent="CharacterBody2D2/Sprite2D"]
-libraries = {
-"": SubResource("AnimationLibrary_156tg")
-}
-speed_scale = 2.0
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D2/Sprite2D"]
-texture_filter = 1
-zoom = Vector2(4, 4)
-
 [node name="Muiskes" type="Sprite2D" parent="."]
 position = Vector2(1759, 370)
 scale = Vector2(0.5, 0.5)
@@ -284,50 +235,10 @@ libraries = {
 "": SubResource("AnimationLibrary_wvlby")
 }
 
-[node name="pause_menu" type="CanvasLayer" parent="."]
-script = ExtResource("8_upktt")
+[node name="CharacterBody2D2" parent="." instance=ExtResource("6_xiwwx")]
+position = Vector2(-234, -206)
+scale = Vector2(1, 1)
 
-[node name="pause_overlay" type="ColorRect" parent="pause_menu"]
-process_mode = 3
-process_priority = 10
-texture_filter = 1
-offset_left = -144.0
-offset_top = -116.0
-offset_right = 143.0
-offset_bottom = 49.0
-color = Color(0, 0, 0, 0.466667)
-script = ExtResource("8_eiic4")
-
-[node name="pause_ui" type="VBoxContainer" parent="pause_menu"]
-top_level = true
-light_mask = 3
-anchors_preset = -1
-anchor_left = -0.004
-anchor_top = -0.046
-anchor_right = -0.004
-anchor_bottom = -0.046
-offset_left = -70.392
-offset_top = -44.192
-offset_right = 69.608
-offset_bottom = 44.808
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 6
-alignment = 1
-
-[node name="Button2" type="Button" parent="pause_menu/pause_ui"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("9_34lxy")
-text = "Resume"
-
-[node name="Button" type="Button" parent="pause_menu/pause_ui"]
-texture_filter = 1
-layout_mode = 2
-theme_override_fonts/font = ExtResource("9_34lxy")
-text = "OPTIONS"
-
-[node name="Button3" type="Button" parent="pause_menu/pause_ui"]
-texture_filter = 1
-layout_mode = 2
-theme_override_fonts/font = ExtResource("9_34lxy")
-text = "EXIT TO MENU"
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D2"]
+position = Vector2(234, 206)
+zoom = Vector2(2, 2)
