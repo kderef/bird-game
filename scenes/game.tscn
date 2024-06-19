@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=3 uid="uid://c715ghqoolykp"]
 
-[ext_resource type="Texture2D" uid="uid://cr3gt5wmpxl5v" path="res://assets/World of Solaria New Style DEMO.png" id="1_sagwa"]
-[ext_resource type="Texture2D" uid="uid://b0mncujl5tk36" path="res://assets/image_article_muizen.webp" id="3_ay1r7"]
+[ext_resource type="Texture2D" uid="uid://7s0h6kfs25cb" path="res://assets/World of Solaria New Style DEMO.png" id="1_sagwa"]
+[ext_resource type="Texture2D" uid="uid://djosnnpxknb1y" path="res://assets/image_article_muizen.webp" id="3_ay1r7"]
 [ext_resource type="Script" path="res://scripts/ImageArticleMuizen.gd" id="4_ce3mw"]
-[ext_resource type="Texture2D" uid="uid://blgnvlriwgmjq" path="res://assets/muiskes.png" id="6_5quls"]
+[ext_resource type="Texture2D" uid="uid://cewub3n2bm2cn" path="res://assets/muiskes.png" id="6_5quls"]
 [ext_resource type="PackedScene" uid="uid://blxdgb7gr7ncw" path="res://scenes/player.tscn" id="6_xiwwx"]
 [ext_resource type="Script" path="res://scripts/Muiskes.gd" id="7_mvllp"]
 
@@ -192,10 +192,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(0.297302, 2.07053, 1.7411),
+"times": PackedFloat32Array(0, 0.9, 2.1),
+"transitions": PackedFloat32Array(0.210224, 2.37841, 0.258816),
 "update": 0,
-"values": [Vector2(-30, 370), Vector2(-30, 300), Vector2(-30, 370)]
+"values": [Vector2(610, 269), Vector2(610, 210), Vector2(610, 269)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wvlby"]
