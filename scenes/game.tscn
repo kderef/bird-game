@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=3 uid="uid://c715ghqoolykp"]
 
-[ext_resource type="Texture2D" uid="uid://7s0h6kfs25cb" path="res://assets/World of Solaria New Style DEMO.png" id="1_sagwa"]
-[ext_resource type="Texture2D" uid="uid://djosnnpxknb1y" path="res://assets/image_article_muizen.webp" id="3_ay1r7"]
+[ext_resource type="Texture2D" uid="uid://cr3gt5wmpxl5v" path="res://assets/World of Solaria New Style DEMO.png" id="1_sagwa"]
+[ext_resource type="Texture2D" uid="uid://b0mncujl5tk36" path="res://assets/image_article_muizen.webp" id="3_ay1r7"]
 [ext_resource type="Script" path="res://scripts/ImageArticleMuizen.gd" id="4_ce3mw"]
-[ext_resource type="Texture2D" uid="uid://cewub3n2bm2cn" path="res://assets/muiskes.png" id="6_5quls"]
+[ext_resource type="Texture2D" uid="uid://blgnvlriwgmjq" path="res://assets/muiskes.png" id="6_5quls"]
 [ext_resource type="PackedScene" uid="uid://blxdgb7gr7ncw" path="res://scenes/player.tscn" id="6_xiwwx"]
 [ext_resource type="Script" path="res://scripts/Muiskes.gd" id="7_mvllp"]
 
