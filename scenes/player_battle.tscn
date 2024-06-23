@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://w5vhvf2djlsh"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_hm5b6"]
+
+[node name="PlayerBattle" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("ImageTexture_hm5b6")
