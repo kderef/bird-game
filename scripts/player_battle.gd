@@ -6,16 +6,20 @@ enum PlayerState {
 
 var player_state = PlayerState.Idle
 
+func play_animation():
+    match player_state:
+        PlayerState.Idle:
+            $player_sprite_idle.visible = true
+            $player_sprite_attack.visible = false
+            $player_sprite_idle/idleanim.play("idleanim")
+        PlayerState.Act:
+            $player_sprite_idle.visible = false
+            $player_sprite_attack.visible = true
+            # TODO: add attack animation (NOTE: first: fix spritesheet)
+            #$player_sprite_attack/attackanim.play("attackanim")
+
 func _ready():
-    pass
+    play_animation()
 
 func _process(delta):
-    match player_state:
-            PlayerState.Idle:
-                $player_sprite_idle.visible = true
-                $player_sprite_attack.visible = false
-                $player_sprite_idle/idleanim.play("a")
-            PlayerState.Act:
-                $player_sprite_idle.visible = false
-                $player_sprite_attack.visible = true
-                $player_sprite_attack/attackanim.play("a")
+    play_animation()
