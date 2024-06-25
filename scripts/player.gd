@@ -7,6 +7,7 @@ var speed = SPEED_NORMAL  # speed, compensated by delta time.
 @onready var actionable_finder: Area2D = $Direction/Actionablefinder
 
 func _ready():
+	
 	pass
 	
 func _physics_process(delta):
@@ -32,12 +33,12 @@ func _physics_process(delta):
 	if Input.is_action_just_released("run"):
 		speed = SPEED_NORMAL
 	
-	move_and_slide()
+	move_and_slide()	
+	return
 
 func _unhandled_input(_event: InputEvent) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("space"):
 		var actionables = actionable_finder.get_overlapping_areas()
 		if actionables.size() > 0:
-			actionables[0].action()
+			actionables.action()
 			return
-		return

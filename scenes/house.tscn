@@ -1,12 +1,12 @@
 [gd_scene load_steps=28 format=3 uid="uid://cqg7duofkj4rt"]
 
-[ext_resource type="Texture2D" uid="uid://dybwnosuengrf" path="res://backgrounds/black.jpg" id="1_dkhmk"]
-[ext_resource type="Texture2D" uid="uid://dt2nuq4r3gt05" path="res://backgrounds/room.png" id="1_mroxe"]
-[ext_resource type="Texture2D" uid="uid://c1wetj2kugrxj" path="res://assets/PC Computer - Stardew Valley - Leah sprites goed.png" id="3_jp4y0"]
+[ext_resource type="Texture2D" uid="uid://b65qy6q1m4dg1" path="res://backgrounds/black.jpg" id="1_dkhmk"]
+[ext_resource type="Texture2D" uid="uid://54rgwgixk8gq" path="res://backgrounds/room.png" id="1_mroxe"]
+[ext_resource type="Texture2D" uid="uid://bh23y64fmj51h" path="res://assets/PC Computer - Stardew Valley - Leah sprites goed.png" id="3_jp4y0"]
 [ext_resource type="Script" path="res://scripts/room.gd" id="4_ctn5x"]
-[ext_resource type="PackedScene" uid="uid://dnl4ph8gw8vk0" path="res://scenes/actionable.tscn" id="6_7qhnl"]
+[ext_resource type="PackedScene" uid="uid://csgxr6b7j1wtk" path="res://scenes/actionable.tscn" id="6_pelsd"]
+[ext_resource type="Resource" uid="uid://blmdodhd26rd0" path="res://dialog/dialogue.dialogue" id="7_a5xbn"]
 [ext_resource type="PackedScene" uid="uid://cpaq0pvujsv1x" path="res://scenes/player2.tscn" id="7_dkxe0"]
-[ext_resource type="Resource" uid="uid://kh7g4u8kvrer" path="res://dialog/main.dialogue" id="8_kby8q"]
 
 [sub_resource type="Animation" id="Animation_n6scj"]
 length = 0.001
@@ -116,8 +116,8 @@ size = Vector2(20, 22)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rabbs"]
 size = Vector2(24, 39)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_eygx5"]
-radius = 31.1448
+[sub_resource type="CircleShape2D" id="CircleShape2D_ham60"]
+radius = 23.0
 
 [node name="House" type="Node2D"]
 
@@ -218,19 +218,15 @@ shape = SubResource("RectangleShape2D_fs5rh")
 position = Vector2(66, 87.5)
 shape = SubResource("RectangleShape2D_rabbs")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(65, 89)
+[node name="CharacterBody2D3" parent="." instance=ExtResource("7_dkxe0")]
+scale = Vector2(1, 1)
 
-[node name="Actionablefinder" parent="StaticBody2D" instance=ExtResource("6_7qhnl")]
-dialogue_resource = ExtResource("8_kby8q")
+[node name="Tv" type="StaticBody2D" parent="."]
+position = Vector2(67, 100)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Actionablefinder"]
-shape = SubResource("CircleShape2D_eygx5")
+[node name="Actionable" parent="Tv" instance=ExtResource("6_pelsd")]
+dialogue_resource = ExtResource("7_a5xbn")
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("7_dkxe0")]
-position = Vector2(-128, -90)
-scale = Vector2(1.454, 1.46525)
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D2"]
-position = Vector2(244.842, 214.298)
-zoom = Vector2(2, 2)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tv/Actionable"]
+position = Vector2(-1, -8)
+shape = SubResource("CircleShape2D_ham60")
