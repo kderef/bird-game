@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://lleyqefuyaud"]
 
 [ext_resource type="Script" path="res://scripts/boomboy.gd" id="1_l4oom"]
-[ext_resource type="Texture2D" uid="uid://28m8auohyp26" path="res://assets/boomboy/spritesheet.png" id="2_4es3s"]
+[ext_resource type="Texture2D" uid="uid://c606a7me1et85" path="res://assets/boomboy/spritesheet.png" id="2_4es3s"]
 
 [sub_resource type="Animation" id="Animation_y3jmy"]
 length = 0.001
