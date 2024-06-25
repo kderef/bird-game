@@ -4,7 +4,11 @@ const SPEED_NORMAL = 4000
 const SPEED_FAST = SPEED_NORMAL * 1.5
 
 var speed = SPEED_NORMAL  # speed, compensated by delta time.
+@onready var actionable_finder: Area2D = $Direction/Actionablefinder
 
+func _ready():
+	pass
+	
 func _physics_process(delta):
 	#movement
 	var direction = Input.get_vector("left", "right", "up", "down")
@@ -30,3 +34,10 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+			return
+		return
