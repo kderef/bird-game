@@ -1,11 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://cqg7duofkj4rt"]
+[gd_scene load_steps=27 format=3 uid="uid://cqg7duofkj4rt"]
 
-[ext_resource type="Texture2D" uid="uid://b65qy6q1m4dg1" path="res://backgrounds/black.jpg" id="1_dkhmk"]
-[ext_resource type="Texture2D" uid="uid://54rgwgixk8gq" path="res://backgrounds/room.png" id="1_mroxe"]
-[ext_resource type="Texture2D" uid="uid://bh23y64fmj51h" path="res://assets/PC Computer - Stardew Valley - Leah sprites goed.png" id="3_jp4y0"]
+[ext_resource type="Texture2D" uid="uid://b4b37iixho1mr" path="res://backgrounds/black.jpg" id="1_dkhmk"]
+[ext_resource type="Texture2D" uid="uid://dhu1l1uosve4g" path="res://backgrounds/room.png" id="1_mroxe"]
+[ext_resource type="Texture2D" uid="uid://hkyc7fbtkhw0" path="res://assets/PC Computer - Stardew Valley - Leah sprites goed.png" id="3_jp4y0"]
 [ext_resource type="Script" path="res://scripts/room.gd" id="4_ctn5x"]
 [ext_resource type="PackedScene" uid="uid://csgxr6b7j1wtk" path="res://scenes/actionable.tscn" id="6_pelsd"]
-[ext_resource type="Resource" uid="uid://blmdodhd26rd0" path="res://dialog/dialogue.dialogue" id="7_a5xbn"]
 [ext_resource type="PackedScene" uid="uid://cpaq0pvujsv1x" path="res://scenes/player2.tscn" id="7_dkxe0"]
 
 [sub_resource type="Animation" id="Animation_n6scj"]
@@ -225,7 +224,6 @@ scale = Vector2(1, 1)
 position = Vector2(67, 100)
 
 [node name="Actionable" parent="Tv" instance=ExtResource("6_pelsd")]
-dialogue_resource = ExtResource("7_a5xbn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tv/Actionable"]
 position = Vector2(-1, -8)

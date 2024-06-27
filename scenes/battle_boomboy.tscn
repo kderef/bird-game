@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://0o8xuqpas5pm"]
 
 [ext_resource type="PackedScene" uid="uid://cpca77ej1yb0r" path="res://scenes/battle.tscn" id="1_w5c55"]
-[ext_resource type="FontFile" uid="uid://dabiywv1jg4pi" path="res://assets/upheavtt.ttf" id="2_6ol5p"]
+[ext_resource type="FontFile" uid="uid://ic7n45nh17vq" path="res://assets/upheavtt.ttf" id="2_6ol5p"]
 [ext_resource type="PackedScene" uid="uid://lleyqefuyaud" path="res://scenes/boomboy.tscn" id="3_7n8tq"]
 [ext_resource type="PackedScene" uid="uid://ix8sbcamod8m" path="res://scenes/player_battle.tscn" id="4_t2a2w"]
 

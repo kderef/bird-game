@@ -4,7 +4,7 @@ const SPEED_NORMAL = 4000
 const SPEED_FAST = SPEED_NORMAL * 1.5
 
 var speed = SPEED_NORMAL  # speed, compensated by delta time.
-@onready var actionable_finder: Area2D = $Direction/Actionablefinder
+@onready var actionable_finder: Area2D = $Direction/ActionableFinder
 
 func _ready():
 	
