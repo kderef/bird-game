@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://blxdgb7gr7ncw"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_c4m5n"]
-[ext_resource type="Texture2D" uid="uid://doqajo0bnmcji" path="res://assets/Olaf/walking/spritesheet (4).png" id="2_xsfld"]
+[ext_resource type="Texture2D" uid="uid://jnos2cno6dp7" path="res://assets/Olaf/walking/spritesheet (4).png" id="2_xsfld"]
 
 [sub_resource type="Animation" id="Animation_y3jmy"]
 length = 0.001
