@@ -2,7 +2,7 @@ extends MarginContainer
 
 
 @onready var label = $MarginContainer/Label
-@onready var timer = $LetterDisplayTimer
+@onready var timer = $lettertimer
 
 
 const MAX_WIDTH = 256
