@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://vfkgivum571j"]
 
 [ext_resource type="Script" path="res://scenes/text_box.gd" id="1_imakc"]
-[ext_resource type="Texture2D" uid="uid://ctevog2t2pabj" path="res://dialg/textbox.png" id="2_qj3p3"]
-[ext_resource type="FontFile" uid="uid://brdwencfeo07i" path="res://assets/Minecraft.ttf" id="3_t3y3o"]
+[ext_resource type="Texture2D" uid="uid://b0lco82nsqg8l" path="res://dialg/textbox.png" id="2_qj3p3"]
+[ext_resource type="FontFile" uid="uid://beqe4msugod8v" path="res://assets/Minecraft.ttf" id="3_t3y3o"]
 
 [node name="TextBox" type="MarginContainer"]
 offset_right = 32.0
