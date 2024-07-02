@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d2k7bkas8jakh"]
 
 [ext_resource type="Script" path="res://interaction/InteractionManager.gd" id="1_3lme4"]
-[ext_resource type="FontFile" uid="uid://8oux6amyfhlh" path="res://assets/Minecraft.ttf" id="2_op37w"]
+[ext_resource type="FontFile" uid="uid://beqe4msugod8v" path="res://assets/Minecraft.ttf" id="2_op37w"]
 
 [node name="InteractionManager" type="Node2D"]
 script = ExtResource("1_3lme4")

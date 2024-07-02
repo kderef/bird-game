@@ -1,12 +1,14 @@
-[gd_scene load_steps=28 format=3 uid="uid://cqg7duofkj4rt"]
+[gd_scene load_steps=31 format=3 uid="uid://cqg7duofkj4rt"]
 
-[ext_resource type="Texture2D" uid="uid://drumjo73y7tyy" path="res://backgrounds/black.jpg" id="1_dkhmk"]
-[ext_resource type="Texture2D" uid="uid://bykxotyduagla" path="res://backgrounds/room.png" id="1_mroxe"]
-[ext_resource type="Texture2D" uid="uid://bk5p4s358dhy6" path="res://assets/PC Computer - Stardew Valley - Leah sprites goed.png" id="3_jp4y0"]
+[ext_resource type="Texture2D" uid="uid://b65qy6q1m4dg1" path="res://backgrounds/black.jpg" id="1_dkhmk"]
+[ext_resource type="Texture2D" uid="uid://54rgwgixk8gq" path="res://backgrounds/room.png" id="1_mroxe"]
+[ext_resource type="Texture2D" uid="uid://bh23y64fmj51h" path="res://assets/PC Computer - Stardew Valley - Leah sprites goed.png" id="3_jp4y0"]
 [ext_resource type="Script" path="res://scripts/room.gd" id="4_ctn5x"]
 [ext_resource type="PackedScene" uid="uid://7rtwn1gydifo" path="res://test/testguy.tscn" id="7_32ujs"]
 [ext_resource type="PackedScene" uid="uid://d2k7bkas8jakh" path="res://interaction/InteractionManager.tscn" id="7_60eba"]
 [ext_resource type="PackedScene" uid="uid://cpaq0pvujsv1x" path="res://scenes/player2.tscn" id="7_dkxe0"]
+[ext_resource type="PackedScene" uid="uid://hn8xv2psep3o" path="res://scenes-int/CounterInter.tscn" id="8_j350a"]
+[ext_resource type="PackedScene" uid="uid://cn5gncpoq4gyp" path="res://scenes-int/bed_int.tscn" id="9_41pic"]
 
 [sub_resource type="Animation" id="Animation_n6scj"]
 length = 0.001
@@ -118,6 +120,9 @@ size = Vector2(24, 39)
 
 [sub_resource type="GDScript" id="GDScript_6apap"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfe4v"]
+size = Vector2(59, 20)
+
 [node name="House" type="Node2D"]
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -221,17 +226,28 @@ script = SubResource("GDScript_6apap")
 [node name="CharacterBody2D3" parent="." instance=ExtResource("7_dkxe0")]
 scale = Vector2(1, 1)
 
-[node name="Testguy" parent="." instance=ExtResource("7_32ujs")]
-position = Vector2(35, 139)
+[node name="TVINT" parent="." instance=ExtResource("7_32ujs")]
+position = Vector2(30, 100)
 scale = Vector2(0.1, 0.1)
 
-[node name="Testguy2" parent="." instance=ExtResource("7_32ujs")]
-position = Vector2(-42, 2)
-scale = Vector2(0.3, 0.3)
-
-[node name="Sprite2D" parent="Testguy2" index="0"]
+[node name="Sprite2D" parent="TVINT" index="0"]
 texture = null
 
 [node name="InteractionManager" parent="." instance=ExtResource("7_60eba")]
 
-[editable path="Testguy2"]
+[node name="CounterInter" parent="." instance=ExtResource("8_j350a")]
+position = Vector2(99, 125)
+
+[node name="CollisionShape2D" parent="CounterInter/InteractionArea" index="0"]
+position = Vector2(64.25, -8.75)
+
+[node name="BedInt" parent="." instance=ExtResource("9_41pic")]
+position = Vector2(87, 195)
+
+[node name="CollisionShape2D" parent="BedInt/InteractionArea" index="0"]
+position = Vector2(-37.5, 0)
+shape = SubResource("RectangleShape2D_lfe4v")
+
+[editable path="TVINT"]
+[editable path="CounterInter"]
+[editable path="BedInt"]
