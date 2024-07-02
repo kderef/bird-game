@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cqg7duofkj4rt"]
+[gd_scene load_steps=36 format=3 uid="uid://cqg7duofkj4rt"]
 
 [ext_resource type="Texture2D" uid="uid://b65qy6q1m4dg1" path="res://backgrounds/black.jpg" id="1_dkhmk"]
 [ext_resource type="Texture2D" uid="uid://54rgwgixk8gq" path="res://backgrounds/room.png" id="1_mroxe"]
@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cpaq0pvujsv1x" path="res://scenes/player2.tscn" id="7_dkxe0"]
 [ext_resource type="PackedScene" uid="uid://hn8xv2psep3o" path="res://scenes-int/CounterInter.tscn" id="8_j350a"]
 [ext_resource type="PackedScene" uid="uid://cn5gncpoq4gyp" path="res://scenes-int/bed_int.tscn" id="9_41pic"]
+[ext_resource type="AudioStream" uid="uid://dqjji7ngi0dml" path="res://Music/home_out.mp3" id="10_2242p"]
+[ext_resource type="Texture2D" uid="uid://b3i2xfi7vvyqf" path="res://assets/betterlight.jpg" id="11_j6tsk"]
+[ext_resource type="PackedScene" uid="uid://c07marhmnnjjb" path="res://scenes/scene_trigger.tscn" id="12_olo31"]
+[ext_resource type="PackedScene" uid="uid://rjahmam1gqje" path="res://scenes/interact_girl.tscn" id="13_a7hpp"]
 
 [sub_resource type="Animation" id="Animation_n6scj"]
 length = 0.001
@@ -123,6 +127,9 @@ size = Vector2(24, 39)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfe4v"]
 size = Vector2(59, 20)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_fn7vi"]
+radius = 36.6742
+
 [node name="House" type="Node2D"]
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -233,6 +240,9 @@ scale = Vector2(0.1, 0.1)
 [node name="Sprite2D" parent="TVINT" index="0"]
 texture = null
 
+[node name="InteractionArea" parent="TVINT" index="1"]
+action_name = "inspect"
+
 [node name="InteractionManager" parent="." instance=ExtResource("7_60eba")]
 
 [node name="CounterInter" parent="." instance=ExtResource("8_j350a")]
@@ -244,10 +254,39 @@ position = Vector2(64.25, -8.75)
 [node name="BedInt" parent="." instance=ExtResource("9_41pic")]
 position = Vector2(87, 195)
 
+[node name="InteractionArea" parent="BedInt" index="1"]
+action_name = "inspect"
+
 [node name="CollisionShape2D" parent="BedInt/InteractionArea" index="0"]
 position = Vector2(-37.5, 0)
 shape = SubResource("RectangleShape2D_lfe4v")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_2242p")
+autoplay = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(267, 256)
+scale = Vector2(0.455172, 0.189944)
+energy = 0.8
+texture = ExtResource("11_j6tsk")
+
+[node name="SceneTrigger" parent="." instance=ExtResource("12_olo31")]
+position = Vector2(270, 269)
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
+position = Vector2(2, 20)
+shape = SubResource("CircleShape2D_fn7vi")
+
+[node name="Interact girl" parent="." instance=ExtResource("13_a7hpp")]
+position = Vector2(167, 194)
+
+[node name="CollisionShape2D" parent="Interact girl/InteractionArea" index="0"]
+position = Vector2(15, 23)
+
 [editable path="TVINT"]
 [editable path="CounterInter"]
 [editable path="BedInt"]
+[editable path="Interact girl"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3rbbbjjxcbgt"]
+[gd_scene load_steps=11 format=3 uid="uid://c3rbbbjjxcbgt"]
 
-[ext_resource type="Texture2D" uid="uid://7qk2nr2obvp1" path="res://backgrounds/wooorld.png" id="1_1y4tv"]
+[ext_resource type="Texture2D" uid="uid://cmoaj8t66ch2x" path="res://backgrounds/wooorld.png" id="1_1y4tv"]
 [ext_resource type="PackedScene" uid="uid://cpaq0pvujsv1x" path="res://scenes/player2.tscn" id="2_jr6ds"]
-[ext_resource type="Texture2D" uid="uid://dcjh0dhbjsa5x" path="res://assets/muiskes.png" id="3_ctoqj"]
+[ext_resource type="Texture2D" uid="uid://8eht2unnbk4b" path="res://assets/muiskes.png" id="3_ctoqj"]
 [ext_resource type="Script" path="res://scripts/Muiskes.gd" id="4_khiut"]
+[ext_resource type="Script" path="res://scenes/scenetohouse.gd" id="6_2xj31"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3wsl5"]
 size = Vector2(128, 132)
@@ -46,6 +47,9 @@ _data = {
 "muiskesbounce-loop": SubResource("Animation_cwihv")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ok4od"]
+size = Vector2(20, 26)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -56,8 +60,8 @@ offset_bottom = 951.0
 texture = ExtResource("1_1y4tv")
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("2_jr6ds")]
-position = Vector2(62, -39)
-scale = Vector2(1.454, 1.46525)
+position = Vector2(-1, 105)
+scale = Vector2(1.1, 1.109)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D2"]
 position = Vector2(244.842, 214.298)
@@ -79,3 +83,23 @@ script = ExtResource("4_khiut")
 libraries = {
 "": SubResource("AnimationLibrary_wvlby")
 }
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(216, 310, 254, 310, 254, 291, 277, 290, 277, 307, 282, 307, 285, 304, 288, 305, 291, 307, 314, 309, 314, 274, 324, 274, 324, 207, 208, 207, 208, 272, 217, 272)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(284, 329, 288, 329, 288, 322, 290, 322, 291, 321, 292, 321, 293, 320, 294, 318, 295, 316, 296, 313, 297, 310, 296, 307, 286, 304, 283, 306, 280, 308, 280, 310, 281, 313, 280, 320, 280, 312, 281, 321, 284, 322)
+
+[node name="scenetohouse" type="Area2D" parent="."]
+position = Vector2(265, 302)
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("6_2xj31")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scenetohouse"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_ok4od")
+
+[connection signal="body_entered" from="scenetohouse" to="scenetohouse" method="_on_body_entered"]

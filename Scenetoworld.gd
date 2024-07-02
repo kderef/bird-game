@@ -2,14 +2,12 @@ extends Node2D
 
 
 @onready var interaction_area: InteractionArea = $InteractionArea
-@onready var sprite = $Sprite2D
+
 
 const lines: Array[String] = [
-	"It's just a tv",
-	"Skibidi toilet's not on there"
+	"Looks cozy, no birds on the bed allowed though"
 	
 ]
-
 
 
 
@@ -18,5 +16,4 @@ func _ready():
 	
 
 func _on_interact():
-	DialogManager.start_dialog(global_position, lines)
-	await DialogManager.dialog_finished
+	get_tree().change_scene_to_file("res://scenes/world.tscn")

@@ -5,11 +5,10 @@ extends Node2D
 @onready var sprite = $Sprite2D
 
 const lines: Array[String] = [
-	"It's just a tv",
-	"Skibidi toilet's not on there"
+	"Why dont you go outside?",
+	"I mean, you've stayed inside for long enough!"
 	
 ]
-
 
 
 

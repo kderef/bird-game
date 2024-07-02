@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://vfkgivum571j"]
+[gd_scene load_steps=4 format=3 uid="uid://vfkgivum571j"]
 
 [ext_resource type="Script" path="res://scenes/text_box.gd" id="1_imakc"]
+[ext_resource type="Texture2D" uid="uid://b0lco82nsqg8l" path="res://dialg/textbox.png" id="2_e2wit"]
+[ext_resource type="FontFile" uid="uid://bjn7y3oalkvnl" path="res://backgrounds/Minecraft.ttf" id="3_wlk3i"]
 
 [node name="TextBox" type="MarginContainer"]
 offset_right = 32.0
@@ -9,6 +11,7 @@ script = ExtResource("1_imakc")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 2
+texture = ExtResource("2_e2wit")
 region_rect = Rect2(0, 0, 48, 48)
 patch_margin_left = 16
 patch_margin_top = 16
@@ -25,6 +28,7 @@ theme_override_constants/margin_bottom = 8
 [node name="Label" type="Label" parent="MarginContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_wlk3i")
 vertical_alignment = 1
 
 [node name="lettertimer" type="Timer" parent="."]
