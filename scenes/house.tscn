@@ -223,3 +223,12 @@ scale = Vector2(1, 1)
 [node name="Testguy" parent="." instance=ExtResource("7_32ujs")]
 position = Vector2(35, 139)
 scale = Vector2(0.1, 0.1)
+
+[node name="Testguy2" parent="." instance=ExtResource("7_32ujs")]
+position = Vector2(-42, 2)
+scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" parent="Testguy2" index="0"]
+texture = null
+
+[editable path="Testguy2"]
