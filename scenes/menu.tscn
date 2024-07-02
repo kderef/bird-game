@@ -1,9 +1,9 @@
 [gd_scene load_steps=17 format=3 uid="uid://bw8lbe8xlm3da"]
 
-[ext_resource type="Texture2D" uid="uid://bimo8wgc04qhj" path="res://assets/World of Solaria New Style DEMO.png" id="1_httn4"]
-[ext_resource type="Texture2D" uid="uid://cvmpr4d8a7eds" path="res://assets/olaf3.png" id="2_btbyl"]
-[ext_resource type="FontFile" uid="uid://deg31fc00grmp" path="res://assets/small_bold_pixel-7.ttf" id="3_kj8s3"]
-[ext_resource type="Texture2D" uid="uid://dcjh0dhbjsa5x" path="res://assets/muiskes.png" id="3_u2e3b"]
+[ext_resource type="Texture2D" uid="uid://dq0l8bc6losuo" path="res://assets/World of Solaria New Style DEMO.png" id="1_httn4"]
+[ext_resource type="Texture2D" uid="uid://cjrmrpon73vq1" path="res://assets/olaf3.png" id="2_btbyl"]
+[ext_resource type="FontFile" uid="uid://fnumgmgrm41n" path="res://assets/small_bold_pixel-7.ttf" id="3_kj8s3"]
+[ext_resource type="Texture2D" uid="uid://8eht2unnbk4b" path="res://assets/muiskes.png" id="3_u2e3b"]
 [ext_resource type="Script" path="res://scripts/btn_play.gd" id="4_6lyak"]
 [ext_resource type="Script" path="res://scripts/Muiskes.gd" id="4_s05qy"]
 [ext_resource type="Script" path="res://scripts/btn_settings.gd" id="5_p0w84"]

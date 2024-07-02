@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn5gncpoq4gyp"]
+
+[ext_resource type="Script" path="res://BedInt.gd" id="1_sshtp"]
+[ext_resource type="PackedScene" uid="uid://dyhtg7cqems8l" path="res://interaction/interaction_area/interaction_area.tscn" id="2_aq6hq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2x8tx"]
+size = Vector2(173, 24)
+
+[node name="BedInt" type="Node2D"]
+script = ExtResource("1_sshtp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(353.5, 272.625)
+scale = Vector2(0.233586, 0.15783)
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_aq6hq")]
+action_name = "talk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(125, 75)
+shape = SubResource("RectangleShape2D_2x8tx")
