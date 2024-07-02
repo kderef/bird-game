@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyr53he252xux"]
+
+[ext_resource type="Texture2D" uid="uid://byh1y470mcf11" path="res://assets/beat/attack_2.png" id="1_smn43"]
+
+[node name="BeatAttack2" type="Node2D"]
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_smn43")

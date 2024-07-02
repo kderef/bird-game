@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://fi5v21n4nrq8"]
+
+[ext_resource type="Texture2D" uid="uid://b5pfi4oenlp5s" path="res://assets/beat/defense_1.png" id="1_nhhjm"]
+
+[node name="BeatShield" type="Node2D"]
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_nhhjm")

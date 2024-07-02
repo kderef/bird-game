@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://ix8sbcamod8m"]
 
 [ext_resource type="Script" path="res://scripts/player_battle.gd" id="1_hggmb"]
-[ext_resource type="Texture2D" uid="uid://bl47fjv6tvd3o" path="res://assets/Olaf/spritesheet (7).png" id="2_uqk6q"]
-[ext_resource type="Texture2D" uid="uid://ccx4e0emxn5hq" path="res://assets/Olaf/olaf-battle.png" id="3_r3a8d"]
+[ext_resource type="Texture2D" uid="uid://6pyujcnribwq" path="res://assets/Olaf/spritesheet (7).png" id="2_uqk6q"]
+[ext_resource type="Texture2D" uid="uid://dm2c0rop1xybq" path="res://assets/Olaf/olaf-battle.png" id="3_r3a8d"]
 
 [sub_resource type="Animation" id="Animation_srsmj"]
 length = 0.001

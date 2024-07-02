@@ -222,6 +222,7 @@ script = SubResource("GDScript_6apap")
 scale = Vector2(1, 1)
 
 [node name="Testguy" parent="." instance=ExtResource("7_32ujs")]
+visible = false
 position = Vector2(35, 139)
 scale = Vector2(0.1, 0.1)
 

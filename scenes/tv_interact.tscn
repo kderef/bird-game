@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhho68k7avwdo"]
+[gd_scene load_steps=4 format=3 uid="uid://f5peucqe7ag4"]
 
 [ext_resource type="Script" path="res://tvINTERACT.gd" id="1_j10ur"]
 [ext_resource type="PackedScene" uid="uid://dyhtg7cqems8l" path="res://interaction/interaction_area/interaction_area.tscn" id="2_25re4"]
