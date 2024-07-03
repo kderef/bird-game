@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxc5ort76bdxj"]
+
+[ext_resource type="Script" path="res://scripts/Flaplaf.gd" id="1_s2d8h"]
+[ext_resource type="Texture2D" uid="uid://b8gd38dtraaql" path="res://flappylaf/olafly2.png" id="2_pu60o"]
+[ext_resource type="Texture2D" uid="uid://b21hwb4x4bobp" path="res://flappylaf/olafly3.png" id="3_h3oh5"]
+[ext_resource type="Texture2D" uid="uid://b4l7pkjjtyuep" path="res://flappylaf/olaflfly1.png" id="4_hrhyg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pnpbh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pu60o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_h3oh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hrhyg")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4d6x0"]
+radius = 5.0
+height = 18.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_s2d8h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pnpbh")
+animation = &"flying"
+frame = 1
+frame_progress = 0.736467
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_4d6x0")

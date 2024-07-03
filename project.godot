@@ -23,6 +23,8 @@ InteractionManager="*res://interaction/InteractionManager.tscn"
 
 [display]
 
+window/size/viewport_width=864
+window/size/viewport_height=936
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
