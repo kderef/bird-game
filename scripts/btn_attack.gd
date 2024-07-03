@@ -1,12 +1,15 @@
-extends Sprite2D
+extends Button
 
+@onready var player = get_node("/")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-    pass # Replace with function body.
-
+    pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-    $AnimationPlayer.play("muiskesbounce-loop")
     pass
+
+func _on_pressed():
+    player.player_attack()
+    pass # Replace with function body.

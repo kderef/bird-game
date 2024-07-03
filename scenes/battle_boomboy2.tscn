@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://sxm00c51swja"]
+
+[ext_resource type="PackedScene" uid="uid://cpca77ej1yb0r" path="res://scenes/battle.tscn" id="1_mabe2"]
+[ext_resource type="FontFile" uid="uid://5f43jlg64l66" path="res://assets/upheavtt.ttf" id="2_6h1uu"]
+[ext_resource type="PackedScene" uid="uid://lleyqefuyaud" path="res://scenes/boomboy.tscn" id="3_kph1a"]
+[ext_resource type="PackedScene" uid="uid://ix8sbcamod8m" path="res://scenes/player_battle.tscn" id="4_4gx75"]
+[ext_resource type="Texture2D" uid="uid://byh1y470mcf11" path="res://assets/beat/attack_2.png" id="5_uba3q"]
+[ext_resource type="Texture2D" uid="uid://ba8nyag6icd5c" path="res://assets/beat/attack_1.png" id="6_ri0bd"]
+[ext_resource type="Texture2D" uid="uid://b5pfi4oenlp5s" path="res://assets/beat/defense_1.png" id="7_jtxfc"]
+[ext_resource type="FontFile" uid="uid://8oux6amyfhlh" path="res://assets/Minecraft.ttf" id="8_c3xse"]
+[ext_resource type="Script" path="res://scripts/btn_attack.gd" id="9_ie7th"]
+
+[node name="BattleBoomboy" type="Node2D"]
+
+[node name="Battle" parent="." instance=ExtResource("1_mabe2")]
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 400.0
+offset_top = 104.0
+offset_right = 752.0
+offset_bottom = 176.0
+theme_override_fonts/font = ExtResource("2_6h1uu")
+theme_override_font_sizes/font_size = 80
+text = "Boomboy"
+horizontal_alignment = 1
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("3_kph1a")]
+position = Vector2(-384, -640)
+scale = Vector2(5, 5)
+
+[node name="player_battle" parent="." instance=ExtResource("4_4gx75")]
+position = Vector2(212, 418)
+scale = Vector2(5, 5)
+
+[node name="beat_atk2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_uba3q")
+
+[node name="beat_atk1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("6_ri0bd")
+
+[node name="beat_def" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("7_jtxfc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 159.0
+offset_top = 504.0
+offset_right = 972.0
+offset_bottom = 599.0
+
+[node name="btn_attack" type="Button" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Deal Damage"
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("8_c3xse")
+theme_override_font_sizes/font_size = 50
+text = "ATTACK"
+script = ExtResource("9_ie7th")
+
+[node name="btn_flee" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("8_c3xse")
+theme_override_font_sizes/font_size = 50
+text = "FLEE"
+
+[connection signal="pressed" from="HBoxContainer/btn_attack" to="HBoxContainer/btn_attack" method="_on_pressed"]
+
+[editable path="Battle"]

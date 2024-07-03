@@ -1,28 +1,30 @@
-[gd_scene load_steps=25 format=3 uid="uid://cpca77ej1yb0r"]
+[gd_scene load_steps=27 format=3 uid="uid://cpca77ej1yb0r"]
 
-[ext_resource type="Texture2D" uid="uid://cjup6mdy7hr6s" path="res://assets/battle-bg.webp" id="1_tvyub"]
-[ext_resource type="Texture2D" uid="uid://c2f2h0y8soyx3" path="res://backgrounds/bg-gif/frame_00_delay-0.1s.jpg" id="2_j886t"]
-[ext_resource type="Texture2D" uid="uid://s37hkrw3hud0" path="res://backgrounds/bg-gif/frame_01_delay-0.1s.jpg" id="3_iq5ux"]
-[ext_resource type="Texture2D" uid="uid://4ccnhd0nsgve" path="res://backgrounds/bg-gif/frame_02_delay-0.1s.jpg" id="4_a0msu"]
-[ext_resource type="Texture2D" uid="uid://d4jxjhywmesji" path="res://backgrounds/bg-gif/frame_03_delay-0.1s.jpg" id="5_pk0in"]
-[ext_resource type="Texture2D" uid="uid://c26ffw22xevjd" path="res://backgrounds/bg-gif/frame_04_delay-0.1s.jpg" id="6_fm0ef"]
-[ext_resource type="Texture2D" uid="uid://c8fpexcbh50eg" path="res://backgrounds/bg-gif/frame_05_delay-0.1s.jpg" id="7_23pjf"]
-[ext_resource type="Texture2D" uid="uid://cb32yi64kl1t0" path="res://backgrounds/bg-gif/frame_06_delay-0.1s.jpg" id="8_38bxf"]
-[ext_resource type="Texture2D" uid="uid://ixah43mv3j62" path="res://backgrounds/bg-gif/frame_07_delay-0.1s.jpg" id="9_j7w3f"]
-[ext_resource type="Texture2D" uid="uid://can5oybriq5v6" path="res://backgrounds/bg-gif/frame_08_delay-0.1s.jpg" id="10_4eqj2"]
-[ext_resource type="Texture2D" uid="uid://cch8xeschnq84" path="res://backgrounds/bg-gif/frame_09_delay-0.1s.jpg" id="11_y8uoa"]
-[ext_resource type="Texture2D" uid="uid://bcvdyl1jy13we" path="res://backgrounds/bg-gif/frame_10_delay-0.1s.jpg" id="12_uylmd"]
-[ext_resource type="Texture2D" uid="uid://bpt7pr1v30tff" path="res://backgrounds/bg-gif/frame_11_delay-0.1s.jpg" id="13_ik2t7"]
-[ext_resource type="Texture2D" uid="uid://cng71c17k8l5t" path="res://backgrounds/bg-gif/frame_12_delay-0.1s.jpg" id="14_a4ccs"]
-[ext_resource type="Texture2D" uid="uid://wfm8bkuoursm" path="res://backgrounds/bg-gif/frame_13_delay-0.1s.jpg" id="15_dssw6"]
-[ext_resource type="Texture2D" uid="uid://dtdclk1xar8gt" path="res://backgrounds/bg-gif/frame_14_delay-0.1s.jpg" id="16_n6hbe"]
+[ext_resource type="Texture2D" uid="uid://dte3nfpwqt7bg" path="res://assets/battle-bg.webp" id="1_tvyub"]
+[ext_resource type="Texture2D" uid="uid://76o2h25raxje" path="res://backgrounds/bg-gif/frame_00_delay-0.1s.jpg" id="2_j886t"]
+[ext_resource type="Texture2D" uid="uid://b0nwum2q03hlk" path="res://backgrounds/bg-gif/frame_01_delay-0.1s.jpg" id="3_iq5ux"]
+[ext_resource type="Texture2D" uid="uid://buyk24mx4e233" path="res://backgrounds/bg-gif/frame_02_delay-0.1s.jpg" id="4_a0msu"]
+[ext_resource type="Texture2D" uid="uid://baj4lik44ohqs" path="res://backgrounds/bg-gif/frame_03_delay-0.1s.jpg" id="5_pk0in"]
+[ext_resource type="Texture2D" uid="uid://c5kn83of5dbry" path="res://backgrounds/bg-gif/frame_04_delay-0.1s.jpg" id="6_fm0ef"]
+[ext_resource type="Texture2D" uid="uid://c24rl1ybg8kwi" path="res://backgrounds/bg-gif/frame_05_delay-0.1s.jpg" id="7_23pjf"]
+[ext_resource type="Texture2D" uid="uid://cvyx1xff7sohn" path="res://backgrounds/bg-gif/frame_06_delay-0.1s.jpg" id="8_38bxf"]
+[ext_resource type="Texture2D" uid="uid://dt63ewowy02oc" path="res://backgrounds/bg-gif/frame_07_delay-0.1s.jpg" id="9_j7w3f"]
+[ext_resource type="Texture2D" uid="uid://dcousb7g348la" path="res://backgrounds/bg-gif/frame_08_delay-0.1s.jpg" id="10_4eqj2"]
+[ext_resource type="Texture2D" uid="uid://dxej3xvsdfept" path="res://backgrounds/bg-gif/frame_09_delay-0.1s.jpg" id="11_y8uoa"]
+[ext_resource type="Texture2D" uid="uid://dl4b8ak4y1q1x" path="res://backgrounds/bg-gif/frame_10_delay-0.1s.jpg" id="12_uylmd"]
+[ext_resource type="Texture2D" uid="uid://do31iflll22ok" path="res://backgrounds/bg-gif/frame_11_delay-0.1s.jpg" id="13_ik2t7"]
+[ext_resource type="Texture2D" uid="uid://cugqty1l5p5hd" path="res://backgrounds/bg-gif/frame_12_delay-0.1s.jpg" id="14_a4ccs"]
+[ext_resource type="Texture2D" uid="uid://dcblhqrjsg43b" path="res://backgrounds/bg-gif/frame_13_delay-0.1s.jpg" id="15_dssw6"]
+[ext_resource type="Texture2D" uid="uid://bbcj0x2kwfxyl" path="res://backgrounds/bg-gif/frame_14_delay-0.1s.jpg" id="16_n6hbe"]
 [ext_resource type="Script" path="res://scripts/battle_overlay.gd" id="17_cd1nt"]
-[ext_resource type="Texture2D" uid="uid://i4mxixm36wg" path="res://backgrounds/beatspace.jpg" id="18_k5hcx"]
-[ext_resource type="Texture2D" uid="uid://dfqvmjn1j8yqf" path="res://backgrounds/battle_bg.jpg" id="18_woe4n"]
-[ext_resource type="Script" path="res://scripts/Beatspace.gd" id="19_kr56i"]
-[ext_resource type="Texture2D" uid="uid://d1crobqcp7qca" path="res://assets/beat/attack_1.png" id="21_l26pj"]
-[ext_resource type="Texture2D" uid="uid://b1p6jyt60iu7b" path="res://assets/beat/attack_2.png" id="22_te6o8"]
-[ext_resource type="Texture2D" uid="uid://qopow774sub8" path="res://assets/beat/defense_1.png" id="23_eg7gd"]
+[ext_resource type="Texture2D" uid="uid://3p2ywkq23na2" path="res://backgrounds/battle_bg.jpg" id="18_woe4n"]
+[ext_resource type="Texture2D" uid="uid://ba8nyag6icd5c" path="res://assets/beat/attack_1.png" id="21_l26pj"]
+[ext_resource type="PackedScene" uid="uid://lleyqefuyaud" path="res://scenes/boomboy.tscn" id="22_k5s6m"]
+[ext_resource type="Texture2D" uid="uid://byh1y470mcf11" path="res://assets/beat/attack_2.png" id="22_te6o8"]
+[ext_resource type="Texture2D" uid="uid://b5pfi4oenlp5s" path="res://assets/beat/defense_1.png" id="23_eg7gd"]
+[ext_resource type="PackedScene" uid="uid://ix8sbcamod8m" path="res://scenes/player_battle.tscn" id="23_iqhny"]
+[ext_resource type="FontFile" uid="uid://8oux6amyfhlh" path="res://assets/Minecraft.ttf" id="24_yxpce"]
+[ext_resource type="Script" path="res://scripts/btn_attack.gd" id="25_io8re"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_spuf1"]
 animations = [{
@@ -112,19 +114,10 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 
-[node name="Beatspace" type="Sprite2D" parent="CenterContainer"]
-texture_filter = 1
-position = Vector2(256, 72)
-scale = Vector2(4, 4)
-texture = ExtResource("18_k5hcx")
-centered = false
-offset = Vector2(0, -8)
-script = ExtResource("19_kr56i")
-
 [node name="BattleBg" type="Sprite2D" parent="CenterContainer"]
 texture_filter = 1
-position = Vector2(88, 80)
-scale = Vector2(6.11, 6.11)
+position = Vector2(67, 50)
+scale = Vector2(6.3, 6.3)
 texture = ExtResource("18_woe4n")
 centered = false
 offset = Vector2(0, 4)
@@ -140,3 +133,37 @@ texture = ExtResource("22_te6o8")
 [node name="beat_def" type="Sprite2D" parent="CenterContainer"]
 visible = false
 texture = ExtResource("23_eg7gd")
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("22_k5s6m")]
+position = Vector2(-384, -640)
+scale = Vector2(5, 5)
+
+[node name="player_battle" parent="." instance=ExtResource("23_iqhny")]
+position = Vector2(212, 418)
+scale = Vector2(5, 5)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 159.0
+offset_top = 504.0
+offset_right = 972.0
+offset_bottom = 599.0
+
+[node name="btn_attack" type="Button" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Deal Damage"
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("24_yxpce")
+theme_override_font_sizes/font_size = 50
+text = "ATTACK"
+script = ExtResource("25_io8re")
+
+[node name="btn_flee" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("24_yxpce")
+theme_override_font_sizes/font_size = 50
+text = "FLEE"
+
+[connection signal="pressed" from="HBoxContainer/btn_attack" to="HBoxContainer/btn_attack" method="_on_pressed"]
