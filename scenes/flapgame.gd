@@ -4,14 +4,14 @@ extends Node
 
 var game_running : bool
 var game_over : bool
-var scroll : int
+var scroll : float
 var score
-const SCROLL_SPEED : float = 800
+const SCROLL_SPEED : float = 700
 var screen_size : Vector2i
 var ground_height : int
 var pipes : Array
-const PIPE_DELAY : int = 80
-const PIPE_RANGE : int = 200
+const PIPE_DELAY : int = 90
+const PIPE_RANGE : int = 230
 
 
 func _ready():
@@ -52,7 +52,7 @@ func _process(delta):
 		scroll += SCROLL_SPEED * delta
 		if scroll >= screen_size.x:
 			scroll = 0
-		$Ground.position.x = -scroll * delta
+		$Ground.position.x = -scroll 
 		for pipe in pipes:
 			pipe.position.x -= SCROLL_SPEED * delta
 	
@@ -84,6 +84,7 @@ func stop_game():
 	
 func bird_hit():
 	$Olaf.falling = true
+	$ded.play()
 	stop_game()
 	pass
 
@@ -91,4 +92,6 @@ func bird_hit():
 
 func _on_ground_hit():
 	$Olaf.falling = false
+	$fall.play()
+
 	stop_game()
