@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://0o8xuqpas5pm"]
 
 [ext_resource type="PackedScene" uid="uid://cpca77ej1yb0r" path="res://scenes/battle.tscn" id="1_w5c55"]
-[ext_resource type="FontFile" uid="uid://5f43jlg64l66" path="res://assets/upheavtt.ttf" id="2_6ol5p"]
+[ext_resource type="FontFile" uid="uid://dabiywv1jg4pi" path="res://assets/upheavtt.ttf" id="2_6ol5p"]
 [ext_resource type="PackedScene" uid="uid://lleyqefuyaud" path="res://scenes/boomboy.tscn" id="3_7n8tq"]
 [ext_resource type="PackedScene" uid="uid://ix8sbcamod8m" path="res://scenes/player_battle.tscn" id="4_t2a2w"]
-[ext_resource type="Texture2D" uid="uid://byh1y470mcf11" path="res://assets/beat/attack_2.png" id="5_cmjet"]
-[ext_resource type="Texture2D" uid="uid://ba8nyag6icd5c" path="res://assets/beat/attack_1.png" id="6_axbjt"]
-[ext_resource type="Texture2D" uid="uid://b5pfi4oenlp5s" path="res://assets/beat/defense_1.png" id="7_j1sg4"]
-[ext_resource type="FontFile" uid="uid://8oux6amyfhlh" path="res://assets/Minecraft.ttf" id="8_w24ff"]
+[ext_resource type="Texture2D" uid="uid://b1p6jyt60iu7b" path="res://assets/beat/attack_2.png" id="5_cmjet"]
+[ext_resource type="Texture2D" uid="uid://d1crobqcp7qca" path="res://assets/beat/attack_1.png" id="6_axbjt"]
+[ext_resource type="Texture2D" uid="uid://qopow774sub8" path="res://assets/beat/defense_1.png" id="7_j1sg4"]
+[ext_resource type="FontFile" uid="uid://beqe4msugod8v" path="res://assets/Minecraft.ttf" id="8_w24ff"]
 [ext_resource type="Script" path="res://scripts/btn_attack.gd" id="9_yjiiu"]
 
 [node name="BattleBoomboy" type="Node2D"]
