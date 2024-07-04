@@ -5,5 +5,5 @@ extends Sprite2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if not muiskes_anim.is_playing():
-		muiskes_anim.play("muiskesbounce-loop")
+    if not muiskes_anim.is_playing():
+        muiskes_anim.play("muiskesbounce-loop")

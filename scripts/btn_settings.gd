@@ -1,7 +1,7 @@
 extends Button
 
 func settings():
-	pass
+    pass
 
 func _ready():
-	pressed.connect(settings) #FIXME
+    pressed.connect(settings) #FIXME
