@@ -25,6 +25,7 @@ InteractionManager="*res://interaction/InteractionManager.tscn"
 
 window/size/viewport_width=864
 window/size/viewport_height=936
+window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 

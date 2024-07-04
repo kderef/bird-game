@@ -6,23 +6,20 @@ var interacted = false
 @onready var sprite = $Sprite2D
 
 const linesfirst: Array[String] = [
-	"Hello, my name is scrungleton dingleberry",
-	"But you can call me michael, get it because im a mouse",
-	"No? Okay",
-	"How long have i been on this island? I don't even know myself",
-	"I've been secretly stealing food from your house",
-	"Don't tell the girl though",
-	"Also buy some cheese please",
-	"You want to fly away from here?",
-	"Why not use the boat",
-	"Eh you're a bird i guess",
-	"Goodbye now, i know you have better things to do"
+	"There's a letter:",
+	"Dear Catherine,",
+	"How have you been doing on the island?",
+	"Did you make your bed today?",
+	"Did you do the groceries?",
+	"Sorry if i'm sounding too protective, i just really miss you",
+	"The illness is really taking a toll on me, i think i have to rest more.",
+	"We'll keep in touch.",
+	"Love, Dad"
 	
 ]
 
 const linessecond: Array[String] = [
-	"You already talked to me don't you remember?",
-	"Eh, guess not everyone is as smart as me"
+	"It's empty."
 ]
 
 
@@ -36,8 +33,6 @@ func _on_interact():
 		DialogManager.start_dialog(global_position, linesfirst)
 		await DialogManager.dialog_finished
 		interacted = true
-
-		
 	else:
 		DialogManager.start_dialog(global_position, linessecond)
 		await DialogManager.dialog_finished

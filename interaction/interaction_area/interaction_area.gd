@@ -4,12 +4,12 @@ class_name InteractionArea
 @export var action_name: String = "inspect"
 
 var interact: Callable = func():
-    pass
+	pass
 
 
 func _on_body_entered(_body):
-    InteractionManager.register_area(self)
+	InteractionManager.register_area(self)
 
 
 func _on_body_exited(_body):
-    InteractionManager.unregister_area(self)
+	InteractionManager.unregister_area(self)

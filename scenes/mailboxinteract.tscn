@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqmwrvryib7yo"]
+
+[ext_resource type="Script" path="res://Mailboxinteract.gd" id="1_rbclb"]
+[ext_resource type="PackedScene" uid="uid://dyhtg7cqems8l" path="res://interaction/interaction_area/interaction_area.tscn" id="2_78wk5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0c7k7"]
+size = Vector2(25, 21.5)
+
+[node name="Mailboxinteract" type="Node2D"]
+script = ExtResource("1_rbclb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_78wk5")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(126, 3.5)
+shape = SubResource("RectangleShape2D_0c7k7")
