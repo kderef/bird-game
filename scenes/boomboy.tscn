@@ -31,27 +31,10 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0.1, 0.1001, 0.4, 0.6, 0.8, 1, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="Animation" id="Animation_4j0jo"]
-resource_name = "boomboy_btl_idle-loop"
-length = 2.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 2, 0, 1]
+"values": [null, null, 1, null, 2, null, 3, 0]
 }
 
 [sub_resource type="Animation" id="Animation_r001v"]
@@ -86,39 +69,45 @@ tracks/0/keys = {
 "values": [0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0, 5, 0]
 }
 
+[sub_resource type="Animation" id="Animation_kupom"]
+resource_name = "boomboy_loop"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.7, 1, 1.2, 1.5, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 1, 2, 2, 3, 3]
+}
+
+[sub_resource type="Animation" id="Animation_wk4pa"]
+resource_name = "idle_loop"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_156tg"]
 _data = {
 "RESET": SubResource("Animation_y3jmy"),
 "Reset": SubResource("Animation_sa3mm"),
 "boomboy_btl-loop": SubResource("Animation_418yt"),
-"boomboy_btl_idle-loop": SubResource("Animation_4j0jo"),
+"boomboy_loop": SubResource("Animation_kupom"),
 "idle": SubResource("Animation_r001v"),
+"idle_loop": SubResource("Animation_wk4pa"),
 "walk-loop": SubResource("Animation_byopf")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c2p0u"]
-size = Vector2(36, 9.99994)
-
-[node name="CharacterBody2D2" type="CharacterBody2D"]
+[node name="CharacterBody2D2" type="Sprite2D"]
 scale = Vector2(0.1, 0.1)
-script = ExtResource("1_l4oom")
-
-[node name="boomboy_sprite" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(250, 197.75)
-scale = Vector2(2.0026, 1.63235)
 texture = ExtResource("2_4es3s")
-flip_h = true
 hframes = 4
 frame = 1
+script = ExtResource("1_l4oom")
 
-[node name="boomboyidle" type="AnimationPlayer" parent="boomboy_sprite"]
+[node name="boomboyidle" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_156tg")
 }
 speed_scale = 2.54
-
-[node name="boomboy_collision" type="CollisionShape2D" parent="."]
-position = Vector2(250, 215)
-scale = Vector2(0.999999, 0.999999)
-shape = SubResource("RectangleShape2D_c2p0u")

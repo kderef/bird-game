@@ -1,12 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://2hfec6e2psrt"]
+[gd_scene load_steps=15 format=3 uid="uid://2hfec6e2psrt"]
 
-[ext_resource type="Texture2D" uid="uid://b5reujse0v2tx" path="res://backgrounds/realbg.png" id="1_3v6bi"]
+[ext_resource type="Texture2D" uid="uid://4ehe5yheh4yc" path="res://backgrounds/realbg.png" id="1_3v6bi"]
 [ext_resource type="Script" path="res://scenes/flapgame.gd" id="1_lngo2"]
 [ext_resource type="PackedScene" uid="uid://7ks3mk55w2v2" path="res://scenes/pipe.tscn" id="2_cskgo"]
 [ext_resource type="PackedScene" uid="uid://dxc5ort76bdxj" path="res://scripts/Flaplaf.tscn" id="2_g44ht"]
 [ext_resource type="PackedScene" uid="uid://cnhuh0c81ixfl" path="res://scenes/ground.tscn" id="4_x2n2m"]
-[ext_resource type="AudioStream" uid="uid://c5fyuluk7qih6" path="res://Music/Duck Quack - Sound Effect (HD) (mp3cut.net).mp3" id="6_anebl"]
-[ext_resource type="AudioStream" uid="uid://du8lei2gk7ddu" path="res://Music/critical-hit-sounds-effect.mp3" id="7_rviso"]
+[ext_resource type="AudioStream" uid="uid://dfh48vmbuw4w2" path="res://Music/Duck Quack - Sound Effect (HD) (mp3cut.net).mp3" id="6_anebl"]
+[ext_resource type="AudioStream" uid="uid://bn2apxtyeeh6p" path="res://Music/critical-hit-sounds-effect.mp3" id="7_rviso"]
+[ext_resource type="FontFile" uid="uid://deg31fc00grmp" path="res://assets/small_bold_pixel-7.ttf" id="8_f013f"]
+[ext_resource type="AudioStream" uid="uid://bq5cjg4uebaxq" path="res://assets/music/Home-Odyssey-08NewMachines.ogg" id="9_tojjl"]
+[ext_resource type="FontFile" uid="uid://5f43jlg64l66" path="res://assets/upheavtt.ttf" id="10_qoic0"]
+[ext_resource type="FontFile" uid="uid://8oux6amyfhlh" path="res://assets/Minecraft.ttf" id="11_xriwn"]
+[ext_resource type="FontFile" uid="uid://bk0b4btjxotqs" path="res://assets/CompassPro.ttf" id="12_l5lgk"]
+[ext_resource type="AudioStream" uid="uid://7hsebkrvb7e8" path="res://assets/music/man-scream-121085.mp3" id="13_koq5m"]
+[ext_resource type="AudioStream" uid="uid://xhskj3gao3ae" path="res://assets/music/ahhhh-37191.mp3" id="14_codjd"]
 
 [node name="flapgame" type="Node"]
 script = ExtResource("1_lngo2")
@@ -32,6 +39,90 @@ stream = ExtResource("6_anebl")
 
 [node name="ded" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_rviso")
+
+[node name="score" type="Label" parent="."]
+offset_left = 276.0
+offset_top = -3.0
+offset_right = 552.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("8_f013f")
+theme_override_font_sizes/font_size = 66
+text = "SCORE: 0"
+horizontal_alignment = 1
+
+[node name="bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_tojjl")
+volume_db = -6.975
+autoplay = true
+
+[node name="start_playing" type="CanvasLayer" parent="."]
+
+[node name="overlay" type="ColorRect" parent="start_playing"]
+offset_top = -10.0
+offset_right = 867.0
+offset_bottom = 765.0
+color = Color(0, 0, 0, 0.615686)
+
+[node name="start_playing_text" type="Label" parent="start_playing"]
+offset_left = 57.0
+offset_top = 197.0
+offset_right = 813.0
+offset_bottom = 248.0
+theme_override_fonts/font = ExtResource("10_qoic0")
+theme_override_font_sizes/font_size = 50
+text = "LEFT CLICK TO START PLAYING"
+horizontal_alignment = 1
+
+[node name="game_over" type="CanvasLayer" parent="."]
+
+[node name="overlay" type="ColorRect" parent="game_over"]
+offset_top = -5.0
+offset_right = 867.0
+offset_bottom = 770.0
+color = Color(0, 0, 0, 0.615686)
+
+[node name="gameover" type="Label" parent="game_over"]
+offset_left = 131.0
+offset_top = 248.0
+offset_right = 738.0
+offset_bottom = 349.0
+theme_override_fonts/font = ExtResource("11_xriwn")
+theme_override_font_sizes/font_size = 100
+text = "GAME OVER"
+
+[node name="buttons" type="VBoxContainer" parent="game_over"]
+offset_left = 151.0
+offset_top = 382.0
+offset_right = 734.0
+offset_bottom = 584.0
+
+[node name="retry" type="Button" parent="game_over/buttons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("12_l5lgk")
+theme_override_font_sizes/font_size = 80
+text = "TRY AGAIN"
+
+[node name="return" type="Button" parent="game_over/buttons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("12_l5lgk")
+theme_override_font_sizes/font_size = 80
+text = "EXIT TO MENU"
+
+[node name="score" type="Label" parent="game_over"]
+offset_left = 297.0
+offset_top = 315.0
+offset_right = 573.0
+offset_bottom = 382.0
+theme_override_fonts/font = ExtResource("8_f013f")
+theme_override_font_sizes/font_size = 66
+text = "SCORE: 0"
+horizontal_alignment = 1
+
+[node name="scream" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_koq5m")
+
+[node name="ascend" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_codjd")
 
 [connection signal="hit" from="Ground" to="." method="_on_ground_hit"]
 [connection signal="timeout" from="PipeTimer" to="." method="_on_pipe_timer_timeout"]

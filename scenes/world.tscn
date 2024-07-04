@@ -1,13 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://c3rbbbjjxcbgt"]
+[gd_scene load_steps=19 format=3 uid="uid://c3rbbbjjxcbgt"]
 
-[ext_resource type="Texture2D" uid="uid://cmoaj8t66ch2x" path="res://backgrounds/wooorld.png" id="1_1y4tv"]
+[ext_resource type="Texture2D" uid="uid://7qk2nr2obvp1" path="res://backgrounds/wooorld.png" id="1_1y4tv"]
 [ext_resource type="PackedScene" uid="uid://cpaq0pvujsv1x" path="res://scenes/player2.tscn" id="2_jr6ds"]
 [ext_resource type="PackedScene" uid="uid://skv3cqol6w88" path="res://scenes/escapeint.tscn" id="4_oosdc"]
-[ext_resource type="Texture2D" uid="uid://gxuwgfd35a11" path="res://assets/seatexture.png" id="5_dxsrk"]
+[ext_resource type="Texture2D" uid="uid://dykcrxf48a1py" path="res://assets/seatexture.png" id="5_dxsrk"]
 [ext_resource type="Script" path="res://scenes/scenetohouse.gd" id="6_2xj31"]
-[ext_resource type="AudioStream" uid="uid://c5p78nh5v3gou" path="res://Music/Uwa+So+Temperate_out.mp3" id="6_u0i2g"]
-[ext_resource type="Texture2D" uid="uid://8eht2unnbk4b" path="res://assets/muiskes.png" id="7_f5isj"]
+[ext_resource type="AudioStream" uid="uid://ostwaysdlln8" path="res://Music/Uwa+So+Temperate_out.mp3" id="6_u0i2g"]
+[ext_resource type="Texture2D" uid="uid://dcjh0dhbjsa5x" path="res://assets/muiskes.png" id="7_f5isj"]
 [ext_resource type="PackedScene" uid="uid://cinixyssmeyuc" path="res://scenes/muiskes_interact.tscn" id="8_nepdo"]
+[ext_resource type="PackedScene" uid="uid://lleyqefuyaud" path="res://scenes/boomboy.tscn" id="9_6vjpi"]
+[ext_resource type="PackedScene" uid="uid://cdpavtm85j116" path="res://scenes/boomboy_interact.tscn" id="10_0kr0f"]
+[ext_resource type="Script" path="res://scripts/boomboy_interact.gd" id="11_crqi2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1gae"]
 size = Vector2(346, 20)
@@ -130,6 +133,14 @@ texture = ExtResource("7_f5isj")
 
 [node name="Muiskes interact" parent="." instance=ExtResource("8_nepdo")]
 position = Vector2(611, 243)
+
+[node name="boomboy" parent="." instance=ExtResource("9_6vjpi")]
+position = Vector2(500, 198)
+scale = Vector2(3, 2.646)
+
+[node name="boomboy_interact" parent="." instance=ExtResource("10_0kr0f")]
+position = Vector2(498, 220)
+script = ExtResource("11_crqi2")
 
 [connection signal="body_entered" from="scenetohouse" to="scenetohouse" method="_on_body_entered"]
 

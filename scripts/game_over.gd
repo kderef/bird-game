@@ -1,15 +1,10 @@
-extends Button
-
-@onready var player1 = $
+extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-    pass
+    $buttons/retry.connect("button_up", )
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
     pass
-
-func _on_pressed():
-    print(player1)
-    pass # Replace with function body.
