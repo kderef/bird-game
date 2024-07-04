@@ -1,7 +1,5 @@
 extends Sprite2D
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var walk = true
-	$vrouw/AnimationPlayer.play("girlwalk")
-	pass
+    if not $vrouw/AnimationPlayer.is_playing():
+        $vrouw/AnimationPlayer.play("girlwalk")

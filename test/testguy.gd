@@ -9,8 +9,6 @@ const lines: Array[String] = [
     
 ]
 
-
-
 func _ready():
     interaction_area.interact = Callable(self, "_on_interact")
     

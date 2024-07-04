@@ -1,12 +1,9 @@
 extends Sprite2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+@onready var muiskes_anim: AnimationPlayer = $AnimationPlayer
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	$AnimationPlayer.play("muiskesbounce-loop")
-	pass
+func _process(_delta):
+    if not muiskes_anim.is_playing():
+       muiskes_anim.play("muiskesbounce-loop")

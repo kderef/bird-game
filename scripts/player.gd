@@ -4,7 +4,7 @@ const SPEED_NORMAL = 4000
 const SPEED_FAST = SPEED_NORMAL * 1.5
 
 var speed = SPEED_NORMAL  # speed, compensated by delta time.
-@onready var actionable_finder: Area2D = $Direction/ActionableFinder
+#@onready var actionable_finder: Area2D = $Direction/ActionableFinder
 
 func _ready():
     
@@ -33,7 +33,4 @@ func _physics_process(delta):
     if Input.is_action_just_released("run"):
         speed = SPEED_NORMAL
     
-    move_and_slide()	
-    return
-
-
+    move_and_slide()

@@ -8,7 +8,24 @@
 [ext_resource type="Texture2D" uid="uid://ba8nyag6icd5c" path="res://assets/beat/attack_1.png" id="6_axbjt"]
 [ext_resource type="Texture2D" uid="uid://b5pfi4oenlp5s" path="res://assets/beat/defense_1.png" id="7_j1sg4"]
 [ext_resource type="FontFile" uid="uid://8oux6amyfhlh" path="res://assets/Minecraft.ttf" id="8_w24ff"]
-[ext_resource type="Script" path="res://scripts/btn_attack.gd" id="9_yjiiu"]
+
+[sub_resource type="GDScript" id="GDScript_g65mm"]
+script/source = "extends Button
+
+#@onready var player1 = $
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+    pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+    pass
+
+func _on_pressed():
+    print(player1)
+    pass # Replace with function body.
+"
 
 [node name="BattleBoomboy" type="Node2D"]
 
@@ -60,7 +77,7 @@ theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("8_w24ff")
 theme_override_font_sizes/font_size = 50
 text = "ATTACK"
-script = ExtResource("9_yjiiu")
+script = SubResource("GDScript_g65mm")
 
 [node name="btn_flee" type="Button" parent="HBoxContainer"]
 layout_mode = 2

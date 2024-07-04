@@ -18,7 +18,6 @@ const linessecond: Array[String] = [
 
 func _ready():
     interaction_area.interact = Callable(self, "_on_interact")
-    
 
 func _on_interact():
     if not interacted:
@@ -28,5 +27,3 @@ func _on_interact():
     else:
         DialogManager.start_dialog(global_position, linessecond)
         await DialogManager.dialog_finished
-    
-    
