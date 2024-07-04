@@ -1,20 +1,34 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3rbbbjjxcbgt"]
+[gd_scene load_steps=16 format=3 uid="uid://c3rbbbjjxcbgt"]
 
 [ext_resource type="Texture2D" uid="uid://cmoaj8t66ch2x" path="res://backgrounds/wooorld.png" id="1_1y4tv"]
 [ext_resource type="PackedScene" uid="uid://cpaq0pvujsv1x" path="res://scenes/player2.tscn" id="2_jr6ds"]
+[ext_resource type="PackedScene" uid="uid://skv3cqol6w88" path="res://scenes/escapeint.tscn" id="4_oosdc"]
+[ext_resource type="Texture2D" uid="uid://gxuwgfd35a11" path="res://assets/seatexture.png" id="5_dxsrk"]
 [ext_resource type="Script" path="res://scenes/scenetohouse.gd" id="6_2xj31"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wsl5"]
-size = Vector2(128, 132)
+[ext_resource type="AudioStream" uid="uid://c5p78nh5v3gou" path="res://Music/Uwa+So+Temperate_out.mp3" id="6_u0i2g"]
+[ext_resource type="Texture2D" uid="uid://8eht2unnbk4b" path="res://assets/muiskes.png" id="7_f5isj"]
+[ext_resource type="PackedScene" uid="uid://cinixyssmeyuc" path="res://scenes/muiskes_interact.tscn" id="8_nepdo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1gae"]
-size = Vector2(346, 262)
+size = Vector2(346, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_giwke"]
 size = Vector2(199, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uv6je"]
+size = Vector2(200, 44.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aoivs"]
+size = Vector2(219, 139.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgwlm"]
+size = Vector2(124, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fh4km"]
+size = Vector2(154, 148)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ok4od"]
-size = Vector2(20, 26)
+size = Vector2(21, 26)
 
 [node name="Node2D" type="Node2D"]
 
@@ -33,12 +47,6 @@ scale = Vector2(1.1, 1.109)
 position = Vector2(244.842, 214.298)
 zoom = Vector2(2, 2)
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(627, 244)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_3wsl5")
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
@@ -48,7 +56,7 @@ polygon = PackedVector2Array(216, 310, 254, 310, 254, 291, 277, 290, 277, 307, 2
 polygon = PackedVector2Array(284, 329, 288, 329, 288, 322, 290, 322, 291, 321, 292, 321, 293, 320, 294, 318, 295, 316, 296, 313, 297, 310, 296, 307, 286, 304, 283, 306, 280, 308, 280, 310, 281, 313, 280, 320, 280, 312, 281, 321, 284, 322)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(552, 264)
+position = Vector2(551, 381)
 shape = SubResource("RectangleShape2D_g1gae")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
@@ -57,6 +65,22 @@ shape = SubResource("RectangleShape2D_giwke")
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(384, 184, 178, 189, 183, 386, 155, 379, 151, 177, 184, 148, 374, 153)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(605, 351.75)
+shape = SubResource("RectangleShape2D_uv6je")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(484.5, 118.25)
+shape = SubResource("RectangleShape2D_aoivs")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(651, 179)
+shape = SubResource("RectangleShape2D_dgwlm")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(756, 267)
+shape = SubResource("RectangleShape2D_fh4km")
 
 [node name="scenetohouse" type="Area2D" parent="."]
 position = Vector2(265, 302)
@@ -68,4 +92,45 @@ script = ExtResource("6_2xj31")
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_ok4od")
 
+[node name="escapeint" parent="." instance=ExtResource("4_oosdc")]
+position = Vector2(195, 324)
+
+[node name="CollisionShape2D" parent="escapeint/InteractionArea" index="0"]
+position = Vector2(19, 21)
+
+[node name="Seatexture" type="Sprite2D" parent="."]
+position = Vector2(360.25, -60.5)
+scale = Vector2(2.7434, 5.07143)
+texture = ExtResource("5_dxsrk")
+
+[node name="Seatexture2" type="Sprite2D" parent="."]
+position = Vector2(-267, 256)
+scale = Vector2(1, 16.8571)
+texture = ExtResource("5_dxsrk")
+
+[node name="Seatexture3" type="Sprite2D" parent="."]
+position = Vector2(956, 240.5)
+scale = Vector2(1, 17.8333)
+texture = ExtResource("5_dxsrk")
+
+[node name="Seatexture4" type="Sprite2D" parent="."]
+position = Vector2(339.75, 704.5)
+scale = Vector2(4.59384, 4.64286)
+texture = ExtResource("5_dxsrk")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_u0i2g")
+volume_db = -10.0
+autoplay = true
+
+[node name="Muiskes" type="Sprite2D" parent="."]
+position = Vector2(612, 237)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_f5isj")
+
+[node name="Muiskes interact" parent="." instance=ExtResource("8_nepdo")]
+position = Vector2(611, 243)
+
 [connection signal="body_entered" from="scenetohouse" to="scenetohouse" method="_on_body_entered"]
+
+[editable path="escapeint"]

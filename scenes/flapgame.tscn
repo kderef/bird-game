@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://2hfec6e2psrt"]
+[gd_scene load_steps=8 format=3 uid="uid://2hfec6e2psrt"]
 
 [ext_resource type="Texture2D" uid="uid://b5reujse0v2tx" path="res://backgrounds/realbg.png" id="1_3v6bi"]
 [ext_resource type="Script" path="res://scenes/flapgame.gd" id="1_lngo2"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cnhuh0c81ixfl" path="res://scenes/ground.tscn" id="4_x2n2m"]
 [ext_resource type="AudioStream" uid="uid://c5fyuluk7qih6" path="res://Music/Duck Quack - Sound Effect (HD) (mp3cut.net).mp3" id="6_anebl"]
 [ext_resource type="AudioStream" uid="uid://du8lei2gk7ddu" path="res://Music/critical-hit-sounds-effect.mp3" id="7_rviso"]
-[ext_resource type="AudioStream" uid="uid://bc6k4bi5l5rdp" path="res://Music/jixaw-metal-pipe-falling-sound.mp3" id="8_r263n"]
 
 [node name="flapgame" type="Node"]
 script = ExtResource("1_lngo2")
@@ -33,9 +32,6 @@ stream = ExtResource("6_anebl")
 
 [node name="ded" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_rviso")
-
-[node name="fall" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_r263n")
 
 [connection signal="hit" from="Ground" to="." method="_on_ground_hit"]
 [connection signal="timeout" from="PipeTimer" to="." method="_on_pipe_timer_timeout"]

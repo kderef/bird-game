@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://skv3cqol6w88"]
+
+[ext_resource type="Script" path="res://escapeint.gd" id="1_fy707"]
+[ext_resource type="PackedScene" uid="uid://dyhtg7cqems8l" path="res://interaction/interaction_area/interaction_area.tscn" id="2_q6jph"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h17gv"]
+size = Vector2(49, 44)
+
+[node name="escapeint" type="Node2D"]
+script = ExtResource("1_fy707")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_q6jph")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(19.5, 19)
+shape = SubResource("RectangleShape2D_h17gv")

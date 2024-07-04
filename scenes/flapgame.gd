@@ -92,6 +92,6 @@ func bird_hit():
 
 func _on_ground_hit():
 	$Olaf.falling = false
-	$fall.play()
+	
 
 	stop_game()
