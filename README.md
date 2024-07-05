@@ -1,8 +1,8 @@
 # Bird game   
 _Een RPG/Flappy Bird game, gescreven in [godot](https://godotengine.org/)._
 ---
-**Datum:** 5-7-2024
-**Door:**  Fernando Schintz, Kian Heitkamp, Luka Nieuwenhuis
+**Datum:** 5-7-2024  
+**Door:**  Fernando Schintz, Kian Heitkamp, Luka Nieuwenhuis  
 
 ##### Belangrijk:
 Als de game niet geopend kan worden, dan kunt u godot downloaden, wat het misschien zal oplossen.
