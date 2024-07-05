@@ -10,9 +10,9 @@ De eerste keer opstarten kan wat langer duren.
 
 ## Controls:
 #### World:
-wasd/pijltjestoetsen : bewegen
-E : interact/praten
+- wasd/pijltjestoetsen : bewegen
+- E : interact/praten
 #### FlappyGame
-Spatie/Space : vlieg
+- Spatie/Space : vlieg
 
 Om de flappy game te starten moet je in de overworld naar het bord gaan en ermee interacten.
