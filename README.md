@@ -1,4 +1,4 @@
-# Bird game  
+# Bird game   
 _Een RPG/Flappy Bird game, gescreven in [godot](https://godotengine.org/)._
 ---
 **Datum:** 5-7-2024
